@@ -1,0 +1,24 @@
+html, body {
+    font-family: Quicksand;
+    margin: 0;
+
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+}
+
+.sectionPaddingLevel {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.sectionPaddingVertical {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+button {
+    font-family: Quicksand;
+}
