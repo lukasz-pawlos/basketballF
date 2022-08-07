@@ -23,7 +23,7 @@
                     <a class="footerAuhor_SocialMedia_link" href="https://github.com/lukasz-pawlos">
                         <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'github' }" />
                     </a>
-                    <a class="footerAuhor_SocialMedia_link" href="https://www.facebook.com/profile.php?id=100007344810188">
+                    <a class="footerAuhor_SocialMedia_link" href="https://www.facebook.com/pawloslukasz">
                         <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
                     </a>
                     <a class="footerAuhor_SocialMedia_link" href="https://www.instagram.com/losiek23/">
