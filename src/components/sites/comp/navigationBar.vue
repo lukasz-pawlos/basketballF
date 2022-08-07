@@ -30,12 +30,12 @@ export default class navigationBar extends Vue{
     font-weight: 600;
     border: 0px;
     border-radius: 20px;
-    background-color: rgb(255, 123, 0, 0);
+    background-color: transparent;
     transition: background-color 1s, color 0.4s;
 }
 
 .navArea__button:hover {
-    background-color: rgb(255, 123, 0, 1);
+    background-color: var(--orange);
     color: rgb(255, 255, 255);
 }
 

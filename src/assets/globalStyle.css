@@ -1,3 +1,11 @@
+:root {
+    --maxSizeTitle: 120px;
+    --stepSize: 20px;
+    --orange: rgb(255, 123, 0);
+    --white: rgb(255, 255, 255);
+  }
+  
+
 html, body {
     font-family: Quicksand;
     margin: 0;
@@ -21,4 +29,30 @@ html, body {
 
 button {
     font-family: Quicksand;
+}
+
+/* h1 - h6 */
+h1 {
+    font-size: var(--maxSizeTitle);
+    font-weight: 900;
+}
+
+h2 {
+    font-size: calc(var(--maxSizeTitle) - var(--stepSize));
+}
+
+h3 {
+    font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 2);
+}
+
+h4 {
+    font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 3);
+}
+
+h5 {
+    font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 4);
+}
+
+h6 {
+    font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 5);
 }

@@ -64,9 +64,9 @@ export default class footerBar extends Vue{
     font-size: 30px;
     font-weight: 100;
     border: 0px;
-    color: wheat;
+    color: var(--white);
     width: 40%;
-    background-color: rgba(255, 123, 0, 0);
+    background-color: transparent;
 }
 
 .footerArea__right__button:hover {
@@ -79,7 +79,7 @@ export default class footerBar extends Vue{
 }
 
 .footerAuthor {
-    color: wheat;
+    color: var(--white);
     text-align: center;
 }
 
@@ -90,7 +90,7 @@ export default class footerBar extends Vue{
 
 .footerAuhor_SocialMedia_link {
     font-size: 30px;
-    color: wheat;
+    color: var(--white);
     padding: 0 10px 0 10px;
 }
 </style>
