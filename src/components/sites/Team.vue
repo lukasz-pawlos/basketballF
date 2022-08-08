@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <navigationBar/>
-        <playersList/>
+        <playersList :players="players"/>
         <div style="height: 1600px"></div>
         <footerBar/>
     </div>
@@ -12,6 +12,7 @@ import playersList from '../team/plyersList.vue';
 import footerBar from './comp/footerBar.vue';
 import navigationBar from './comp/navigationBar.vue';
 import pageLoader from './comp/pageLoader.vue';
+// import player from '../team/plyer.vue';
 
 @Options({
     components: {
@@ -22,8 +23,16 @@ import pageLoader from './comp/pageLoader.vue';
     }
 })
 
-export default class Home extends Vue{
-    
+export default class Team extends Vue{
+
+    get players(){
+        return [
+            {name: 'Stefan', forname: 'Kot', number: 1, age: 34, id: 1},
+            {name: 'Alojzy', forname: 'Kon', number: 22, age: 22, id: 2},
+            {name: 'Rafał', forname: 'Pies', number: 33, age: 18, id: 3},
+        ];
+    }
+
 }
 </script>
 <style>

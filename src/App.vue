@@ -1,11 +1,12 @@
 <template>
   <pageLoader/>
-  <Home/>
+  <Team/>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import Home from './components/sites/Home.vue';
+import Team from './components/sites/Team.vue';
 import './assets/globalStyle.css';
 import pageLoader from './components/sites/comp/pageLoader.vue';
 
@@ -13,6 +14,7 @@ import pageLoader from './components/sites/comp/pageLoader.vue';
   components: {
     Home,
     pageLoader,
+    Team,
   },
 })
 export default class App extends Vue {}
