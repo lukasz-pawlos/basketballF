@@ -1,10 +1,6 @@
 <template>
     <section class="sectionPaddingLevel sectionPaddingVertical">
-        <ul>
-            <li v-for="player in players" :key="player">
-                <player :player="player"/>
-            </li>
-        </ul>
+        <player v-for="player in players" :key="player" :player="player"/>
     </section>
 </template>
 <script lang="ts">

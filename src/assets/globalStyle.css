@@ -35,24 +35,30 @@ button {
 h1 {
     font-size: var(--maxSizeTitle);
     font-weight: 900;
+    margin: 0;
 }
 
 h2 {
     font-size: calc(var(--maxSizeTitle) - var(--stepSize));
+    margin: 0;
 }
 
 h3 {
     font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 2);
+    margin: 0;
 }
 
 h4 {
     font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 3);
+    margin: 0;
 }
 
 h5 {
     font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 4);
+    margin: 0;
 }
 
 h6 {
     font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 5);
+    margin: 0;
 }

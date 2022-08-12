@@ -1,9 +1,16 @@
 <template>
-    <div>
-        <h1>{{ player.name }} {{player.forname}}</h1>
-        <h2>{{ player.number }}</h2>
-        <h3>{{ player.age }}</h3>
-        <h5>{{ player.id }}</h5>
+    <div class="player" :id="player.id">
+        <div class="playerLeft">
+            <img class="playerLeft__img" src="../../../public/player.webp" alt="">
+        </div>
+        <div class="playerRight">
+            <h1>{{ player.name }} {{player.forname}}</h1>
+            <span class="playerNumber">
+                <p class="playerNumber__p">{{ player.number }}</p>
+            </span>
+            <h3>{{ player.nationality }}</h3>
+            <h4>Age: {{ player.age }}</h4>
+        </div>
     </div>
 </template>
 <script lang="ts">
@@ -18,6 +25,39 @@ export default class player extends Vue{
     player!: [];  
 }
 </script>
+
 <style>
-    
+.player {
+    background-color: red;
+    display: flex;
+    gap: 30px;
+    padding: 5% 5%;
+    margin-bottom: 3%;
+    border-radius: 60px;
+    border: 2px solid black;
+}
+
+.playerNumber {
+    position: absolute;
+    right: 0;
+}
+
+.playerNumber__p {
+    font-size: 200px;
+    margin: 0;
+}
+
+.playerLeft {
+    width: 25%;
+}
+
+.playerLeft__img {
+    width: 100%;
+}
+
+.playerRight {
+    width: 75%;
+    position: relative
+}
+
 </style>

@@ -27,9 +27,9 @@ export default class Team extends Vue{
 
     get players(){
         return [
-            {name: 'Stefan', forname: 'Kot', number: 1, age: 34, id: 1},
-            {name: 'Alojzy', forname: 'Kon', number: 22, age: 22, id: 2},
-            {name: 'Rafał', forname: 'Pies', number: 33, age: 18, id: 3},
+            {name: 'Stefan', forname: 'Kot', number: 1, age: 34, nationality: "Poland", id: 1},
+            {name: 'Alojzy', forname: 'Kon', number: 22, age: 22,nationality: "Poland", id: 2},
+            {name: 'Rafał', forname: 'Pies', number: 33, age: 18,nationality: "Poland", id: 3},
         ];
     }
 
