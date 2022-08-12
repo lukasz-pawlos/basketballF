@@ -1,28 +1,26 @@
 <template>
     <div class="container">
         <navigationBar/>
-        <playersList/>
+        <h1>Home</h1>
         <div style="height: 1600px"></div>
         <footerBar/>
     </div>
 </template>
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import playersList from '../team/plyersList.vue';
-import footerBar from './comp/footerBar.vue';
-import navigationBar from './comp/navigationBar.vue';
-import pageLoader from './comp/pageLoader.vue';
+import footerBar from '../components/pages/footerBar.vue';
+import navigationBar from '../components/pages/navigationBar.vue';
+import pageLoader from './pageLoader.vue';
 
 @Options({
     components: {
         navigationBar,
         footerBar,
         pageLoader,
-        playersList,
     }
 })
 
-export default class Home extends Vue{
+export default class HomeView extends Vue{
     
 }
 </script>

@@ -1,11 +1,11 @@
 <template>
     <section class="navSection sectionPaddingLevel sectionPaddingVertical">
         <div class="navArea ">
-            <button class="navArea__button">Home</button>
-            <button class="navArea__button">News</button>
-            <button class="navArea__button">Team</button>
-            <button class="navArea__button">Stast</button>
-            <button class="navArea__button">Contact</button>
+            <button class="navArea__button" @click="$router.push('/')">Home</button>
+            <button class="navArea__button" @click="$router.push('/')">News</button>
+            <button class="navArea__button" @click="$router.push('/team')">Team</button>
+            <button class="navArea__button" @click="$router.push('/')">Stast</button>
+            <button class="navArea__button" @click="$router.push('/')">Contact</button>
         </div>
     </section>
 </template>
@@ -36,7 +36,7 @@ export default class navigationBar extends Vue{
 
 .navArea__button:hover {
     background-color: var(--orange);
-    color: rgb(255, 255, 255);
+    color: var(--white);
 }
 
 </style>

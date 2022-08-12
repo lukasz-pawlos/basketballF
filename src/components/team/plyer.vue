@@ -28,13 +28,13 @@ export default class player extends Vue{
 
 <style>
 .player {
-    background-color: red;
+    background-color: var(--grey);
     display: flex;
     gap: 30px;
     padding: 5% 5%;
     margin-bottom: 3%;
     border-radius: 60px;
-    border: 2px solid black;
+    border: 2px solid var(--darkGrey);
 }
 
 .playerNumber {

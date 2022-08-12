@@ -1,7 +1,7 @@
 <template>
     <div class="pageLoader" v-if="!isLoaded">
         <span class="pageLoader__object">
-            <img src="../../../../public/ball.svg" alt="Girl in a jacket" />
+            <img src="../../public/ball.svg" alt="Girl in a jacket" />
         </span>
     </div>
 </template>
@@ -20,7 +20,6 @@ export default class pageLoader extends Vue{
         document.onreadystatechange = () => {
             if(document.readyState == "complete") {
                 this.isLoaded = true;
-                console.log(12321)
             }
         }
     }

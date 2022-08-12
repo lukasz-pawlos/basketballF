@@ -8,10 +8,10 @@
 </template>
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import playersList from '../team/plyersList.vue';
-import footerBar from './comp/footerBar.vue';
-import navigationBar from './comp/navigationBar.vue';
-import pageLoader from './comp/pageLoader.vue';
+import playersList from '../components/team/plyersList.vue';
+import footerBar from '../components/pages/footerBar.vue';
+import navigationBar from '../components/pages/navigationBar.vue';
+import pageLoader from './pageLoader.vue';
 // import player from '../team/plyer.vue';
 
 @Options({
@@ -23,7 +23,7 @@ import pageLoader from './comp/pageLoader.vue';
     }
 })
 
-export default class Team extends Vue{
+export default class TeamView extends Vue{
 
     get players(){
         return [
@@ -36,9 +36,5 @@ export default class Team extends Vue{
 }
 </script>
 <style>
-.container {
-    background-image: url('~/public/background.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 </style>
