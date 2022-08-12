@@ -1,5 +1,5 @@
 <template>
-    <section class="sectionPaddingLevel sectionPaddingVertical">
+    <section class="playerLstSection sectionPaddingLevel sectionPaddingVertical">
         <player v-for="player in players" :key="player" :player="player"/>
     </section>
 </template>
@@ -21,6 +21,9 @@ export default class playersList extends Vue{
     players!: []
 }
 </script>
+
 <style>
-    
+.playerLstSection {
+    background-color: black;
+}    
 </style>

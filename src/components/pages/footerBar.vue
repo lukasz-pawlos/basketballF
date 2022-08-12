@@ -2,16 +2,16 @@
     <footer>
         <section class="footerSection sectionPaddingVertical">
             <div class="footerArea">
-                <div class="footerArea__left">
+                <div class="footerAreaLeft">
 
                 </div>
-                <div class="footerArea__right">
-                    <ul>
-                        <li><button class="footerArea__right__button">Home</button></li>
-                        <li><button class="footerArea__right__button">News</button></li>
-                        <li><button class="footerArea__right__button">Team</button></li>
-                        <li><button class="footerArea__right__button">Stats</button></li>
-                        <li><button class="footerArea__right__button">Contact</button></li>
+                <div class="footerAreaRight">
+                    <ul class="footerAreaRight__ul">
+                        <li><button class="footerAreaRight__button" @click="$router.push('/')">Home</button></li>
+                        <li><button class="footerAreaRight__button" @click="$router.push('/')">News</button></li>
+                        <li><button class="footerAreaRight__button" @click="$router.push('/team')">Team</button></li>
+                        <li><button class="footerAreaRight__button" @click="$router.push('/')">Stats</button></li>
+                        <li><button class="footerAreaRight__button" @click="$router.push('/')">Contact</button></li>
                     </ul>
                 </div>
             </div>
@@ -51,16 +51,16 @@ export default class footerBar extends Vue{
 .footerArea {
     display: flex;
 }
-.footerArea__left {
+.footerAreaLeft {
     width: 50%;
 }
 
-.footerArea__right {
+.footerAreaRight {
     width: 50%;
     text-align: center;
 }
 
-.footerArea__right__button{
+.footerAreaRight__button{
     font-size: 30px;
     font-weight: 100;
     border: 0px;
@@ -69,8 +69,12 @@ export default class footerBar extends Vue{
     background-color: transparent;
 }
 
-.footerArea__right__button:hover {
+.footerAreaRight__button:hover {
     font-weight: 900;
+}
+
+.footerAreaRight__ul{
+    list-style-type: none;
 }
 
 .footerLine{
