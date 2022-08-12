@@ -1,7 +1,7 @@
 <template>
     <div class="pageLoader" v-if="!isLoaded">
         <span class="pageLoader__object">
-            <img src="../../public/ball.svg" alt="Girl in a jacket" />
+            <img src="../../public/ball.svg" alt="" />
         </span>
     </div>
 </template>

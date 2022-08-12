@@ -6,7 +6,7 @@
         <div class="playerRight">
             <h1>{{ player.name }} {{player.forname}}</h1>
             <span class="playerNumber">
-                <p class="playerNumber__p">{{ player.number }}</p>
+                <p class="playerNumber__p">#{{ player.number }}</p>
             </span>
             <h3>{{ player.nationality }}</h3>
             <h4>Age: {{ player.age }}</h4>
