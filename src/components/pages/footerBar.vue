@@ -2,18 +2,24 @@
     <footer>
         <section class="footerSection sectionPaddingVertical">
             <div class="footerArea">
-                <div class="footerAreaLeft">
+                <div class="footerAreaHalf">
 
                 </div>
-                <div class="footerAreaRight">
-                    <ul class="footerAreaRight__ul">
-                        <li><button class="footerAreaRight__button" @click="$router.push('/')">Home</button></li>
-                        <li><button class="footerAreaRight__button" @click="$router.push('/')">News</button></li>
-                        <li><button class="footerAreaRight__button" @click="$router.push('/team')">Team</button></li>
-                        <li><button class="footerAreaRight__button" @click="$router.push('/')">Stats</button></li>
-                        <li><button class="footerAreaRight__button" @click="$router.push('/')">Contact</button></li>
+                <div class="footerAreaGuarter">
+                    <ul class="footerAreaGuarter__ul">
+                        <li class="footerAreaGuarter__li">
+                            <span class="footerAreaGuarter__span" @click="$router.push('/')">Home</span></li>
+                        <li class="footerAreaGuarter__li">
+                            <span class="footerAreaGuarter__span" @click="$router.push('/')">News</span></li>
+                        <li class="footerAreaGuarter__li">
+                            <span class="footerAreaGuarter__span" @click="$router.push('/team')">Team</span></li>
+                        <li class="footerAreaGuarter__li">
+                            <span class="footerAreaGuarter__span" @click="$router.push('/')">Stats</span></li>
+                        <li class="footerAreaGuarter__li">
+                            <span class="footerAreaGuarter__span" @click="$router.push('/')">Contact</span></li>
                     </ul>
                 </div>
+                <div class="footerAreaGuarter"></div>
             </div>
             <hr class="footerLine">
             <div class="footerAuthor">
@@ -51,34 +57,35 @@ export default class footerBar extends Vue{
 .footerArea {
     display: flex;
 }
-.footerAreaLeft {
+.footerAreaHalf {
     width: 50%;
 }
 
-.footerAreaRight {
-    width: 50%;
+.footerAreaGuarter {
+    width: 25%;
     text-align: center;
 }
 
-.footerAreaRight__button{
+.footerAreaGuarter__span{
     font-size: 30px;
     font-weight: 100;
-    border: 0px;
     color: var(--white);
-    width: 40%;
-    background-color: transparent;
 }
 
-.footerAreaRight__button:hover {
+.footerAreaGuarter__span:hover {
     font-weight: 900;
 }
 
-.footerAreaRight__ul{
+.footerAreaGuarter__ul{
     list-style-type: none;
+    text-align: left;
+}
+
+.footerAreaGuarter__li {
+    margin-bottom: 20px;
 }
 
 .footerLine{
-    margin-top: 2%;
     width: 95%;
 }
 
