@@ -3,7 +3,7 @@
         <section class="footerSection sectionPaddingVertical">
             <div class="footerArea">
                 <div class="footerAreaHalf">
-
+                    <contactForm/>
                 </div>
                 <div class="footerAreaGuarter">
                     <ul class="footerAreaGuarter__ul">
@@ -42,9 +42,17 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-class-component";
+import { Options, Vue } from "vue-class-component";
+import contactForm from "../forms/contactForm.vue";
+
+    @Options({
+    components: {
+        contactForm,
+    }
+})
 
 export default class footerBar extends Vue{
+
     
 }
 </script>
@@ -59,6 +67,9 @@ export default class footerBar extends Vue{
 }
 .footerAreaHalf {
     width: 50%;
+    padding: 20px 30px;
+    text-align: center;
+
 }
 
 .footerAreaGuarter {
