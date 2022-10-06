@@ -37,7 +37,7 @@ export default class socialMediaBar extends Vue{
 <style>
 
 .socialMediaSection {
-    background: orangered;
+    background: linear-gradient(to top right, #cc3300 0%, #ff6600 100%);
 }
 
 .socialMediaBar {
@@ -59,6 +59,7 @@ export default class socialMediaBar extends Vue{
     text-align: center;
     box-shadow: 0px 0px 50px -13px;
     transition: background-color 1s, color 0.4s, box-shadow 1s;
+    cursor: pointer;
 }
 
 .mediaLink__button:hover {

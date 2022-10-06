@@ -1,16 +1,18 @@
 <template>
     <!-- <div class="container"> -->
         <navigationBar/>
+        <newsBar/>
         <socialMediaBar/>
         <div style="height: 1600px"></div>
         <footerBar/>
     <!-- </div> -->
 </template>
 <script lang="ts">
-import socialMediaBar from '@/components/team/socialMediaBar.vue';
+import newsBar from '@/components/sections/newsBar.vue';
+import socialMediaBar from '@/components/sections/socialMediaBar.vue';
 import { Options, Vue } from 'vue-class-component';
-import footerBar from '../components/pages/footerBar.vue';
-import navigationBar from '../components/pages/navigationBar.vue';
+import footerBar from '../components/sections/footerBar.vue';
+import navigationBar from '../components/sections/navigationBar.vue';
 import pageLoader from './pageLoader.vue';
 
 @Options({
@@ -19,6 +21,7 @@ import pageLoader from './pageLoader.vue';
         footerBar,
         pageLoader,
         socialMediaBar,
+        newsBar,
     }
 })
 
