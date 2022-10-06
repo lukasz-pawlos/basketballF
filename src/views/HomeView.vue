@@ -1,12 +1,13 @@
 <template>
-    <div class="container">
+    <!-- <div class="container"> -->
         <navigationBar/>
-        <h1>Home</h1>
+        <socialMediaBar/>
         <div style="height: 1600px"></div>
         <footerBar/>
-    </div>
+    <!-- </div> -->
 </template>
 <script lang="ts">
+import socialMediaBar from '@/components/team/socialMediaBar.vue';
 import { Options, Vue } from 'vue-class-component';
 import footerBar from '../components/pages/footerBar.vue';
 import navigationBar from '../components/pages/navigationBar.vue';
@@ -17,6 +18,7 @@ import pageLoader from './pageLoader.vue';
         navigationBar,
         footerBar,
         pageLoader,
+        socialMediaBar,
     }
 })
 

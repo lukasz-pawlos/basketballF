@@ -5,7 +5,6 @@
         <label class="formArea__label" for="title">Title</label>
         <input class="formArea__input" type="text" name="title" id="title" placeholder="Title">
 
-
         <label class="formArea__label" for="title">First name</label>
         <input class="formArea__input" type="text" name="fname" id="fname" placeholder="First name">
 
