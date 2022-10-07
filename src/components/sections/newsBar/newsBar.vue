@@ -54,8 +54,8 @@ export default class newsBar extends Vue{
 
 .moreNews {
     width: 70%;
-    background: orangered;
-    color: wheat;
+    background: var(--orange);
+    color: var(--white);
     border-radius: 20px;
     font-size: 30px;
     cursor: pointer;

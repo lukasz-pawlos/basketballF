@@ -1,9 +1,10 @@
 <template>
     <!-- <div class="container"> -->
         <navigationBar/>
+        <statsBar/>
         <newsBar/>
         <socialMediaBar/>
-        <div style="height: 1600px"></div>
+        <!-- <div style="height: 1600px"></div> -->
         <footerBar/>
     <!-- </div> -->
 </template>
@@ -14,6 +15,7 @@ import { Options, Vue } from 'vue-class-component';
 import footerBar from '../components/sections/footerBar.vue';
 import navigationBar from '../components/sections/navigationBar.vue';
 import pageLoader from './pageLoader.vue';
+import statsBar from '@/components/sections/statsBar/statsBar.vue';
 
 @Options({
     components: {
@@ -22,6 +24,7 @@ import pageLoader from './pageLoader.vue';
         pageLoader,
         socialMediaBar,
         newsBar,
+        statsBar,
     }
 })
 

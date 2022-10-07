@@ -37,7 +37,7 @@ export default class socialMediaBar extends Vue{
 <style>
 
 .socialMediaSection {
-    background: linear-gradient(to top right, #cc3300 0%, #ff6600 100%);
+    background: var(--sectionGradient);
 }
 
 .socialMediaBar {

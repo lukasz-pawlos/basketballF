@@ -26,7 +26,7 @@ export default class playersList extends Vue{
 
 <style>
 .playerListSection {
-    background-color: black;
+    background-color: var(--black);
 }
 .playerListSection__h2 {
     color: var(--white);

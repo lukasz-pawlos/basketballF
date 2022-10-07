@@ -30,7 +30,7 @@ export default class news extends Vue{
 
 <style>
 .news {
-    background: black;
+    background: var(--black);
     width: 33%;
     /* height: 600px; */
     border-radius: 16px;
@@ -45,7 +45,7 @@ export default class news extends Vue{
 }
 
 .news__h3 {
-    color: wheat;
+    color: var(--white);
     font-size: 60px;
 }
 
@@ -54,14 +54,14 @@ export default class news extends Vue{
 }
 
 .news__p {
-    color: wheat;
+    color: var(--white);
     text-align: justify;
 }
 
 .news__button {
     background: none;
-    color: orangered;
-    border: 1px solid orangered;
+    color: var(--orange);
+    border: 1px solid var(--orange);
     padding: 5px 15px;
     border-radius: 10px;
     position: absolute;
@@ -72,8 +72,8 @@ export default class news extends Vue{
 }
 
 .news__button:hover {
-    background: orangered;
-    color: white;
-    box-shadow: 0px 0px 75px -13px orangered;
+    background: var(--orange);
+    color: var(--white);
+    box-shadow: 0px 0px 75px -13px var(--orange);
 }
 </style>

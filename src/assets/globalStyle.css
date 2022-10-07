@@ -5,6 +5,8 @@
     --white: rgb(255, 255, 255);
     --grey: rgb(146, 145, 145);
     --darkGrey: rgb(75, 74, 74);
+    --black: rgb(0, 0, 0);
+    --sectionGradient: linear-gradient(to top right, #cc3300 0%, #ff6600 100%);
   }
   
 
@@ -27,6 +29,12 @@ html, body {
 .sectionPaddingVertical {
     padding-top: 2%;
     padding-bottom: 2%;
+}
+
+.statsBlock {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    border-radius: 16px;
 }
 
 button {

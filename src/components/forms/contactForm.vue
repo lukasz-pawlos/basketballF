@@ -37,13 +37,13 @@ export default class contactForm extends Vue{
 }
 
 .formArea__label {
-    color: wheat;
+    color: var(--white);
     text-align: left;
     font-size: 22px;
     position: relative;
     top: 12px;
     left: 20px;
-    background: orangered;
+    background: var(--orange);
     width: fit-content;
     border-radius: 20px;
     padding: 0 8px;
@@ -63,7 +63,7 @@ export default class contactForm extends Vue{
 
 .formArea__input::placeholder,
 .formArea__texarea::placeholder {
-    color: black;
+    color: var(--black);
     opacity: 0.6;
     position: absolute;
     top: 10px;
