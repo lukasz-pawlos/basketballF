@@ -22,7 +22,13 @@ import { Vue } from 'vue-class-component';
 export default class player extends Vue{
 
     @Prop()
-    player!: [];  
+    player!: {
+        name: string,
+        forname: string,
+        number: number,
+        nationality: string,
+        age: number
+    };  
 }
 </script>
 

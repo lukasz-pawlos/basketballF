@@ -8,7 +8,7 @@
     <!-- </div> -->
 </template>
 <script lang="ts">
-import newsBar from '@/components/sections/newsBar.vue';
+import newsBar from '@/components/sections/newsBar/newsBar.vue';
 import socialMediaBar from '@/components/sections/socialMediaBar.vue';
 import { Options, Vue } from 'vue-class-component';
 import footerBar from '../components/sections/footerBar.vue';
