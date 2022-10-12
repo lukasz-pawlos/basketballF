@@ -1,11 +1,11 @@
 <template>
-    <div class="statsBlock">
+    <div class="statsBlock bigStats">
         <h3>Points</h3>
-        
-        <playerStat/>
-        <playerStat/>
-        <playerStat/>
-
+        <div class="flex column">
+            <playerStat/>
+            <playerStat/>
+            <playerStat/>
+        </div>
     </div>
 </template>
 
@@ -23,29 +23,7 @@
 }
 </script>
 <style>
-.playerStat {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    height: 60px;
-}
-
-.playerstat__img {
+.bigStats {
     height: 100%;
-}
-
-.playerStat__h4 {
-    font-size: 30px;
-}
-
-.playerStat__b {
-    font-size: 40px;
-}
-
-.playerStat__hr {
-    width: 80%;
-    border: 1px dashed  var(--black);
-    margin-bottom: 38px;
 }
 </style>

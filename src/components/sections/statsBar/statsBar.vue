@@ -6,7 +6,7 @@
                 <div class="statsContainer">
                     <statsBlock/>
                 </div>
-                <div class="statsContainer">
+                <div class="statsContainer smallContainer">
                     <statsSmallBlock/>
                     <statsSmallBlock/>
                 </div>
@@ -64,5 +64,11 @@
 
 .statsContainer {
     width: 50%;
+}
+
+.smallContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 </style>

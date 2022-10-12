@@ -1,7 +1,11 @@
 <template>
-    <div class="statsBlock">
+    <div class="statsBlock smallStats">
         <h3>Points</h3>
-            <playerStat class="column"/>
+        <div class="flex plyerColumn">
+            <playerStat :isColumn="true"/>
+            <playerStat :isColumn="true"/>
+            <playerStat :isColumn="true"/>
+        </div>
         </div>
 </template>
 
@@ -20,7 +24,12 @@
 }
 </script>
 <style>
-.column{
-    flex-direction: column;
+
+.plyerColumn {
+    justify-content: space-evenly;
+}
+
+.smallStats {
+    height: 50%;
 }
 </style>
