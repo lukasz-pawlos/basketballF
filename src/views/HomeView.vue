@@ -1,6 +1,7 @@
 <template>
     <!-- <div class="container"> -->
         <navigationBar/>
+        <scheduleSlider/>
         <teamNameBar/>
         <statsBar/>
         <newsBar/>
@@ -18,6 +19,7 @@ import navigationBar from '../components/sections/navigationBar.vue';
 import pageLoader from './pageLoader.vue';
 import statsBar from '@/components/sections/statsBar/statsBar.vue';
 import teamNameBar from '@/components/sections/teamNameBar.vue';
+import scheduleSlider from '@/components/sliders/scheduleSlider.vue';
 
 @Options({
     components: {
@@ -28,6 +30,7 @@ import teamNameBar from '@/components/sections/teamNameBar.vue';
         newsBar,
         statsBar,
         teamNameBar,
+        scheduleSlider,
     }
 })
 

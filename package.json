@@ -14,12 +14,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "core-js": "^3.8.3",
-    "tiny-slider": "^2.9.4",
     "vee-validate": "^4.6.10",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
     "vue-property-decorator": "^9.1.2",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vue-tiny-slider": "^0.1.39"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
