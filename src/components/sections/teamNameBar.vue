@@ -1,7 +1,9 @@
 <template>
-    <div class="teamBar">
+    <section>
+        <div class="teamBar">
         <h1>{{ Data.teamName }}</h1>
-    </div>
+        </div>
+    </section>
 </template>
 
 <script lang="ts">
