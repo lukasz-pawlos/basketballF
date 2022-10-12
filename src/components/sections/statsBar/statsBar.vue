@@ -11,7 +11,7 @@
                     <statsSmallBlock/>
                 </div>
             </div>
-            <longButton>ALL STATS</longButton>
+            <longButton :path="'/stats'">ALL STATS</longButton>
         </div>
 
     </section>

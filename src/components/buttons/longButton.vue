@@ -1,5 +1,5 @@
 <template>
-    <button class="lngBtn"><slot></slot></button>
+    <button class="lngBtn" @click="$router.push(path)"><slot></slot></button>
 </template>
 
 <script lang="ts">
@@ -9,7 +9,7 @@ import { Prop } from "vue-property-decorator";
 export default class longButton extends Vue{
 
     @Prop()
-    text!: string
+    path!: string
     
 }
 </script>
