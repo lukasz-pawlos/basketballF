@@ -1,6 +1,7 @@
 <template>
     <!-- <div class="container"> -->
         <navigationBar/>
+        <teamNameBar/>
         <statsBar/>
         <newsBar/>
         <socialMediaBar/>
@@ -16,6 +17,7 @@ import footerBar from '../components/sections/footerBar.vue';
 import navigationBar from '../components/sections/navigationBar.vue';
 import pageLoader from './pageLoader.vue';
 import statsBar from '@/components/sections/statsBar/statsBar.vue';
+import teamNameBar from '@/components/sections/teamNameBar.vue';
 
 @Options({
     components: {
@@ -25,6 +27,7 @@ import statsBar from '@/components/sections/statsBar/statsBar.vue';
         socialMediaBar,
         newsBar,
         statsBar,
+        teamNameBar,
     }
 })
 
