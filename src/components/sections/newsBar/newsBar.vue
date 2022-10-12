@@ -5,7 +5,7 @@
                 <div class="newsList">
                     <news v-for="data in news" :key="data" :news="data"/>
                 </div>
-            <button class="moreNews"> ALL NEWS</button>
+            <longButton>ALL NEWS</longButton>
         </div>
     </section>
 </template>
@@ -13,10 +13,12 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import news from './newsBlock.vue';
+import longButton from '@/components/buttons/longButton.vue';
 
 @Options({
     components: {
     news,
+    longButton,
     }
 })
 
@@ -49,15 +51,6 @@ export default class newsBar extends Vue{
 .newsList {
     display: flex;
     gap: 20px;
-    padding: 20px 0;
 }
 
-.moreNews {
-    width: 70%;
-    background: var(--orange);
-    color: var(--white);
-    border-radius: 20px;
-    font-size: 30px;
-    cursor: pointer;
-}
 </style>

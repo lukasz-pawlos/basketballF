@@ -5,16 +5,13 @@
         </span>
     </div>
 </template>
-<script lang="">
+<script lang="ts">
 import { Vue } from 'vue-class-component';
 
 
 export default class pageLoader extends Vue{
-    data() {
-        return{
-            isLoaded: false,
-        }
-    }
+
+    isLoaded = false
 
     mounted() {
         document.onreadystatechange = () => {

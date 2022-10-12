@@ -8,6 +8,7 @@
             </p>                        
         </div>
         <button class="news__button">Read more</button>
+        <LongButton></LongButton>
     </div>
 </template>
 
@@ -15,6 +16,7 @@
 
 import { Prop } from 'vue-property-decorator'
 import { Vue } from 'vue-class-component';
+
     
 export default class news extends Vue{
         
