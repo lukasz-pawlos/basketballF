@@ -3,6 +3,7 @@
         <navigationBar/>
         <scheduleSlider/>
         <teamNameBar/>
+        <photoSlider/>
         <statsBar/>
         <newsBar/>
         <socialMediaBar/>
@@ -19,7 +20,8 @@ import navigationBar from '../components/sections/navigationBar.vue';
 import pageLoader from './pageLoader.vue';
 import statsBar from '@/components/sections/statsBar/statsBar.vue';
 import teamNameBar from '@/components/sections/teamNameBar.vue';
-import scheduleSlider from '@/components/sliders/scheduleSlider.vue';
+import photoSlider from '@/components/sliders/photoSlider.vue';
+import scheduleSlider from '@/components/sliders/scheduleSlider/scheduleSlider.vue';
 
 @Options({
     components: {
@@ -30,7 +32,9 @@ import scheduleSlider from '@/components/sliders/scheduleSlider.vue';
         newsBar,
         statsBar,
         teamNameBar,
+        photoSlider,
         scheduleSlider,
+
     }
 })
 
