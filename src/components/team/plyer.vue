@@ -1,15 +1,21 @@
 <template>
     <div class="player" :id="player.id">
-        <div class="playerLeft">
-            <img class="playerLeft__img" src="../../../public/player.webp" alt="">
+        <div class="flex playerName">
+            <span class="playerName__span">
+                <img class="playerName__img" src="../../../public/player.webp" alt="">
+            </span>
+            <div class="playerName_div">
+                <h2 class="playerName_h2">{{ player.name }} {{player.forname}}</h2>  
+            </div>
+            
         </div>
-        <div class="playerRight">
-            <h1>{{ player.name }} {{player.forname}}</h1>
+
+        <div>
             <span class="playerNumber">
                 <p class="playerNumber__p">#{{ player.number }}</p>
             </span>
-            <h3>{{ player.nationality }}</h3>
-            <h4>Age: {{ player.age }}</h4>
+            <h5>{{ player.nationality }}</h5>
+            <h6>Age: {{ player.age }}</h6>
         </div>
     </div>
 </template>
@@ -35,7 +41,6 @@ export default class player extends Vue{
 <style>
 .player {
     background-color: var(--grey);
-    display: flex;
     gap: 30px;
     padding: 5% 5%;
     margin-bottom: 3%;
@@ -53,17 +58,22 @@ export default class player extends Vue{
     margin: 0;
 }
 
-.playerLeft {
-    width: 25%;
+.playerName__span {
+    width: 100px;
+    height: 100px;
 }
 
-.playerLeft__img {
+.playerName__img {
     width: 100%;
 }
 
-.playerRight {
-    width: 75%;
-    position: relative
+.playerName_div {
+    max-width: 180px;
+    text-align: end;
+}
+
+.playerName_h2 {
+    font-size: 48px;
 }
 
 </style>

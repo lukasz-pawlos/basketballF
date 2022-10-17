@@ -1,7 +1,9 @@
 <template>
     <section class="playerListSection sectionPaddingLevel sectionPaddingVertical">
         <h2 class="playerListSection__h2">Players</h2>
-        <player v-for="player in players" :key="player" :player="player"/>
+        <div class="players">
+            <player v-for="player in players" :key="player" :player="player"/>
+        </div>
     </section>
 </template>
 
@@ -32,5 +34,10 @@ export default class playersList extends Vue{
     color: var(--white);
     padding-bottom: 100px;
     text-align: center;
+}
+.players {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
 }
 </style>
