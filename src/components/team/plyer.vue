@@ -9,13 +9,17 @@
             </div>
             
         </div>
-
+        <hr>
         <div>
-            <span class="playerNumber">
-                <p class="playerNumber__p">#{{ player.number }}</p>
+            <div class="flex" style="align-items: center">
+                <div>
+                    <h5>{{ player.nationality }}</h5>
+                    <h6>Age: {{ player.age }}</h6>
+                </div>
+                <span class="playerNumber">
+                <p class="playerNumber__p">{{ player.number }}</p>
             </span>
-            <h5>{{ player.nationality }}</h5>
-            <h6>Age: {{ player.age }}</h6>
+            </div>
         </div>
     </div>
 </template>
@@ -41,20 +45,23 @@ export default class player extends Vue{
 <style>
 .player {
     background-color: var(--grey);
-    gap: 30px;
-    padding: 5% 5%;
-    margin-bottom: 3%;
-    border-radius: 60px;
+    padding: 20px;
+    border-radius: 24px;
+    min-width: 320px;
     border: 2px solid var(--darkGrey);
 }
 
 .playerNumber {
-    position: absolute;
+    /* position: absolute; */
     right: 0;
 }
 
+.playerName{
+    justify-content: space-between;
+}
+
 .playerNumber__p {
-    font-size: 200px;
+    font-size: 75px;
     margin: 0;
 }
 

@@ -17,8 +17,8 @@
         <hr>
         <div class="gameData flex">
             <span class="gameIcon">
-                <font-awesome-icon  :icon="{ prefix: 'fa', iconName: 'home' }" />
-                <!-- <font-awesome-icon v-else :icon="{ prefix: 'fab', iconName: 'at' }" />  -->
+                <font-awesome-icon v-if="gameData.home === 'Legia'"  :icon="{ prefix: 'fa', iconName: 'home' }" />
+                <font-awesome-icon v-else :icon="{ prefix: 'fa', iconName: 'at' }" /> 
             </span>
             <span class="gameInfo">{{ gameData.city }}</span>
         </div>
@@ -47,10 +47,6 @@ gameData !: {
     homeScore: number,
     guestScore: number
 } 
-
-    mounted(){
-        console.log(this.gameData)
-    }
 
 }
 </script>

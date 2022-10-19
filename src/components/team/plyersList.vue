@@ -36,8 +36,9 @@ export default class playersList extends Vue{
     text-align: center;
 }
 .players {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 </style>
