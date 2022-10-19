@@ -1,12 +1,10 @@
 <template>
-        <navigationBar/>
-        <scheduleSlider/>
-        <teamNameBar/>
-        <photoSlider/>
-        <statsBar/>
-        <newsBar/>
-        <socialMediaBar/>
-        <footerBar/>
+    <navigationBar/>
+    <scheduleSlider/>
+    <teamNameBar/>
+    
+    <socialMediaBar/>
+    <footerBar/>
 </template>
 
 <script lang="ts">
@@ -22,28 +20,24 @@ import photoSlider from '@/components/sliders/photoSlider.vue';
 import scheduleSlider from '@/components/sliders/scheduleSlider/scheduleSlider.vue';
 
 @Options({
-    components: {
-        navigationBar,
-        footerBar,
-        pageLoader,
-        socialMediaBar,
-        newsBar,
-        statsBar,
-        teamNameBar,
-        photoSlider,
-        scheduleSlider,
+components: {
+    navigationBar,
+    footerBar,
+    pageLoader,
+    socialMediaBar,
+    newsBar,
+    statsBar,
+    teamNameBar,
+    photoSlider,
+    scheduleSlider,
 
-    }
+}
 })
 
-export default class HomeView extends Vue{
-    
+export default class ContactView extends Vue{
+
 }
 </script>
 <style>
-.container {
-    background-image: url('~/public/background.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 </style>

@@ -11,7 +11,7 @@
         </div>
         <hr>
         <div>
-            <div class="flex" style="align-items: center">
+            <div class="flex" style="align-items: center; justify-content: space-between;">
                 <div>
                     <h5>{{ player.nationality }}</h5>
                     <h6>Age: {{ player.age }}</h6>

@@ -1,10 +1,11 @@
 <template>
-    <div class="container">
         <navigationBar/>
+        <scheduleSlider/>
+        <!-- <teamNameBar/> -->
         <playersList :players="players"/>
         <coachesList :coaches="coaches"/>
+        <socialMediaBar/>
         <footerBar/>
-    </div>
 </template>
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
@@ -13,6 +14,9 @@ import footerBar from '../components/sections/footerBar.vue';
 import navigationBar from '../components/sections/navigationBar.vue';
 import pageLoader from './pageLoader.vue';
 import coachesList from '../components/team/coachesList.vue';
+import scheduleSlider from '@/components/sliders/scheduleSlider/scheduleSlider.vue';
+import teamNameBar from '@/components/sections/teamNameBar.vue';
+import socialMediaBar from '@/components/sections/socialMediaBar.vue';
 // import player from '../team/plyer.vue';
 
 @Options({
@@ -22,6 +26,9 @@ import coachesList from '../components/team/coachesList.vue';
         pageLoader,
         playersList,
         coachesList,
+        scheduleSlider,
+        teamNameBar,
+        socialMediaBar,
     }
 })
 

@@ -13,7 +13,7 @@
                             </router-link>
                         </li>
                         <li class="footerAreaGuarter__li">
-                            <router-link to="/">
+                            <router-link to="/news">
                                 <span class="footerAreaGuarter__span">News</span>
                             </router-link>
                         </li>
@@ -23,13 +23,13 @@
                             </router-link>
                         </li>
                         <li class="footerAreaGuarter__li">
-                            <router-link to="/">
+                            <router-link to="/stats">
                                 <span class="footerAreaGuarter__span">Stats</span>
                             </router-link>
                         </li>
                         <li class="footerAreaGuarter__li">
-                            <router-link to="/">
-                                <span class="footerAreaGuarter__span" @click="$router.push('/')">Contact</span>
+                            <router-link to="/contact">
+                                <span class="footerAreaGuarter__span">Contact</span>
                             </router-link>
                         </li>
                     </ul>

@@ -7,16 +7,19 @@
             <router-link to="/">
                 <button class="navArea__button">Home</button>
             </router-link>
-            <router-link to="/">
+            <router-link to="/news">
                 <button class="navArea__button">News</button>
+            </router-link>
+            <router-link to="/schedule">
+                <button class="navArea__button">Schedule</button>
             </router-link>
             <router-link to="/team">
                 <button class="navArea__button">Team</button>
             </router-link>
-            <router-link to="/">
-                <button class="navArea__button">Stast</button>
+            <router-link to="/stats">
+                <button class="navArea__button">Stats</button>
             </router-link>
-            <router-link to="/">
+            <router-link to="/contact">
                 <button class="navArea__button">Contact</button>
             </router-link>
         </div>
