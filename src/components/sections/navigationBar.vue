@@ -4,11 +4,21 @@
             <div class="navAreaLogo">
                 <img class="navAreaLogo_img" src="ball.png" alt="">
             </div>
-            <button class="navArea__button" @click="$router.push('/')">Home</button>
-            <button class="navArea__button" @click="$router.push('/')">News</button>
-            <button class="navArea__button" @click="$router.push('/team')">Team</button>
-            <button class="navArea__button" @click="$router.push('/')">Stast</button>
-            <button class="navArea__button" @click="$router.push('/')">Contact</button>
+            <router-link to="/">
+                <button class="navArea__button">Home</button>
+            </router-link>
+            <router-link to="/">
+                <button class="navArea__button">News</button>
+            </router-link>
+            <router-link to="/team">
+                <button class="navArea__button">Team</button>
+            </router-link>
+            <router-link to="/">
+                <button class="navArea__button">Stast</button>
+            </router-link>
+            <router-link to="/">
+                <button class="navArea__button">Contact</button>
+            </router-link>
         </div>
     </section>
 </template>

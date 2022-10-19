@@ -8,15 +8,30 @@
                 <div class="footerAreaGuarter">
                     <ul class="footerAreaGuarter__ul">
                         <li class="footerAreaGuarter__li">
-                            <span class="footerAreaGuarter__span" @click="$router.push('/')">Home</span></li>
+                            <router-link to="/">
+                                <span class="footerAreaGuarter__span">Home</span>
+                            </router-link>
+                        </li>
                         <li class="footerAreaGuarter__li">
-                            <span class="footerAreaGuarter__span" @click="$router.push('/')">News</span></li>
+                            <router-link to="/">
+                                <span class="footerAreaGuarter__span">News</span>
+                            </router-link>
+                        </li>
                         <li class="footerAreaGuarter__li">
-                            <span class="footerAreaGuarter__span" @click="$router.push('/team')">Team</span></li>
+                            <router-link to="/team">
+                                <span class="footerAreaGuarter__span">Team</span>
+                            </router-link>
+                        </li>
                         <li class="footerAreaGuarter__li">
-                            <span class="footerAreaGuarter__span" @click="$router.push('/')">Stats</span></li>
+                            <router-link to="/">
+                                <span class="footerAreaGuarter__span">Stats</span>
+                            </router-link>
+                        </li>
                         <li class="footerAreaGuarter__li">
-                            <span class="footerAreaGuarter__span" @click="$router.push('/')">Contact</span></li>
+                            <router-link to="/">
+                                <span class="footerAreaGuarter__span" @click="$router.push('/')">Contact</span>
+                            </router-link>
+                        </li>
                     </ul>
                 </div>
                 <div class="footerAreaGuarter"></div>
@@ -94,6 +109,7 @@ export default class footerBar extends Vue{
 
 .footerAreaGuarter__li {
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .footerLine{
