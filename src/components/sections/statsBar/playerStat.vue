@@ -8,13 +8,13 @@
 </template>
 
 <script lang="ts">
-    import { Vue } from 'vue-class-component';
-    import { Prop } from 'vue-property-decorator';
+import { Vue } from 'vue-class-component';
+import { Prop } from 'vue-property-decorator';
 
-    export default class playerStats extends Vue{
+export default class playerStats extends Vue{
 
-        @Prop()
-        isColumn!: { default: false } 
+    @Prop()
+    isColumn!: { default: false } 
     
 }
 </script>

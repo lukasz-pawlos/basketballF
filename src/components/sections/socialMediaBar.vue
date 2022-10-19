@@ -1,6 +1,6 @@
 <template>
     <section class="socialMediaSection sectionPaddingLevel sectionPaddingVertical">
-        <div class="socialMediaBar">
+        <div class="text-center">
             <h2>Find us on</h2>
             <div class="mediaLink">
                 <button class="mediaLink__button">
@@ -40,9 +40,6 @@ export default class socialMediaBar extends Vue{
     background: var(--sectionGradient);
 }
 
-.socialMediaBar {
-    text-align: center;
-}
 
 .mediaLink {
     display: flex;

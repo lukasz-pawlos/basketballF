@@ -38,6 +38,7 @@ export default class player extends Vue{
         number: number,
         nationality: string,
         age: number
+        id: number
     };  
 }
 </script>

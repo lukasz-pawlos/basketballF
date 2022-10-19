@@ -10,15 +10,15 @@
 </template>
 
 <script lang="ts">
-    import { Options, Vue } from 'vue-class-component';
-    import playerStat from './playerStat.vue';
+import { Options, Vue } from 'vue-class-component';
+import playerStat from './playerStat.vue';
 
-    @Options({
-        components: {
-            playerStat,
-        }
-    })
-    export default class statsBlock extends Vue{
+@Options({
+    components: {
+        playerStat,
+    }
+})
+export default class statsBlock extends Vue{
     
 }
 </script>

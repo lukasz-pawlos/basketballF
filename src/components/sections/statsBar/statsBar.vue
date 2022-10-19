@@ -1,6 +1,6 @@
 <template lang>
     <section class="statsSection sectionPaddingLevel sectionPaddingVertical">
-        <div class="statsBar">
+        <div class="text-center">
             <h2>Stats</h2>
             <div class="statsList">
                 <div class="statsContainer">
@@ -55,10 +55,6 @@ export default class statsBar extends Vue{
 <style>
 .statsSection {
     background: var(--sectionGradient);
-}
-
-.statsBar {
-    text-align: center;
 }
 
 .statsList {

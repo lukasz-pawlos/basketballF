@@ -1,6 +1,6 @@
 <template>
     <section class="newsSection sectionPaddingLevel sectionPaddingVertical">
-        <div class="newsBar">
+        <div class="text-center">
             <h2>Hot news</h2>
                 <div class="newsList">
                     <news v-for="data in news" :key="data" :news="data"/>
@@ -44,9 +44,6 @@ export default class newsBar extends Vue{
 </script>
 
 <style>
-.newsBar {
-    text-align: center;
-}
 
 .newsList {
     display: flex;

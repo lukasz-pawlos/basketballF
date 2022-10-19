@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="teamBar">
+        <div class="teamBar text-center">
         <h1>{{ Data.teamName }}</h1>
         </div>
     </section>
@@ -15,7 +15,6 @@ export default class teamNameBar extends Vue {
 </script>
 <style>
 .teamBar {
-    text-align: center;
     background: var(--black);
     color: var(--white);
 }

@@ -1,7 +1,11 @@
 :root {
     --maxSizeTitle: 120px;
     --stepSize: 20px;
-    --orange: rgb(255, 123, 0);
+    --orange: rgba(255, 123, 0, 1);
+    --orange-08: rgba(255, 123, 0, 0.8);
+    --orange-06: rgba(255, 123, 0, 0.6);
+    --orange-04: rgba(255, 123, 0, 0.4);
+    --orange-02: rgba(255, 123, 0, 0.2);
     --white: rgb(255, 255, 255);
     --grey: rgb(146, 145, 145);
     --darkGrey: rgb(75, 74, 74);
@@ -11,6 +15,10 @@
 
 .flex {
     display: flex;
+}
+
+.text-center {
+    text-align: center;
 }
   
 
