@@ -45,7 +45,7 @@ export default class player extends Vue{
 
 <style>
 .player {
-    background-color: var(--grey);
+    background-color: var(--orange);
     padding: 20px;
     border-radius: 24px;
     min-width: 320px;
