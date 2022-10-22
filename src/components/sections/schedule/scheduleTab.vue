@@ -10,7 +10,6 @@
                             <span>:</span>
                             <span>89</span>
                         </span>
-                        <!-- <span>---</span> -->
                     </td>
                     <td class="scheduleTab__td teamTab">Gues team</td>
                 </tr>
@@ -26,7 +25,6 @@
                             <span>:</span>
                             <span>89</span>
                         </span>
-                        <!-- <span>---</span> -->
                     </td>
                     <td>Gues team</td>
                 </tr>
@@ -42,7 +40,6 @@
                             <span>:</span>
                             <span>89</span>
                         </span>
-                        <!-- <span>---</span> -->
                     </td>
                     <td>Gues team</td>
                 </tr>
@@ -53,15 +50,13 @@
                             <span>, </span>
                             <span>Wrocław</span>
                         </span>
-                        <!-- <span>
-                            COMING SOON
-                        </span> -->
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
 </template>
+
 <script lang="ts">
 import { Vue } from "vue-class-component";
 

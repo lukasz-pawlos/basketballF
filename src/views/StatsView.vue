@@ -1,10 +1,11 @@
 <template>
-    <navigationBar/>
-    <scheduleSlider/>
-    <teamNameBar/>
-    
-    <socialMediaBar/>
-    <footerBar/>
+    <div>
+        <navigationBar/>
+        <scheduleSlider/>
+        <teamNameBar/>
+        <socialMediaBar/>
+        <footerBar/>
+    </div>
 </template>
 
 <script lang="ts">

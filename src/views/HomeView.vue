@@ -1,4 +1,5 @@
 <template>
+    <div>
         <navigationBar/>
         <scheduleSlider/>
         <teamNameBar/>
@@ -7,6 +8,7 @@
         <newsBar/>
         <socialMediaBar/>
         <footerBar/>
+    </div>
 </template>
 
 <script lang="ts">

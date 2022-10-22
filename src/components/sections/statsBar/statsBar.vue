@@ -33,22 +33,6 @@ import longButton from '@/components/buttons/longButton.vue';
 
 export default class statsBar extends Vue{
     
-    // get news() {
-    //     return [
-    //     {
-    //         title: "News",
-    //         text: "These are short, famous texts in English from classic sources like the Bible or Shakespeare. Some texts have word definitions and explanations to help you. Some of these texts are written in an old style of English. Try to understand them, because the English that we speak today is based on what our great, great, great, great grandparents spoke before! Of course, not all these texts were originally written in English"
-    //     },
-    //     {
-    //         title: "News",
-    //         text: "These are short, famous texts in English from classic sources like the Bible or Shakespeare. Some texts have word definitions and explanations to help you. Some of these texts are written in an old style of English. Try to understand them, because the English that we speak today is based on what our great, great, great, great grandparents spoke before! Of course, not all these texts were originally written in English"
-    //     },
-    //     {
-    //         title: "News",
-    //         text: "These are short, famous texts in English from classic sources like the Bible or Shakespeare. Some texts have word definitions and explanations to help you. Some of these texts are written in an old style of English. Try to understand them, because the English that we speak today is based on what our great, great, great, great grandparents spoke before! Of course, not all these texts were originally written in English"
-    //     }
-    //     ]
-    // }
 }
 </script>
 

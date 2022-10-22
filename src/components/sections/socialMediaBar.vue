@@ -3,25 +3,24 @@
         <div class="text-center">
             <h2>Find us on</h2>
             <div class="mediaLink">
-                <button class="mediaLink__button">
-                    <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
-                </button>
-
-                <button class="mediaLink__button">
+                <a class="mediaLink__button" href="https://www.facebook.com/">
+                        <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }" />
+                </a>
+                <a class="mediaLink__button" href="https://twitter.com/">
                     <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'twitter' }" />
-                </button>
+                </a>
 
-                <button class="mediaLink__button">
+                <a class="mediaLink__button" href="https://youtube.com/">
                     <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'youtube' }" />
-                </button>
+                </a>
 
-                <button class="mediaLink__button">
+                <a class="mediaLink__button" href="https://www.instagram.com/">
                     <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' }" />
-                </button>
+                </a>
 
-                <button class="mediaLink__button">
+                <a class="mediaLink__button" href="https://www.tiktok.com/">
                     <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'tiktok' }" />
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -49,10 +48,12 @@ export default class socialMediaBar extends Vue{
 
 .mediaLink__button {
     background: none;
-    border-radius: 70px;
-    height: 140px;
-    width: 140px;
-    font-size: 100px;
+    padding: 20px;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    color: var(--black);
+    font-size: 80px;
     text-align: center;
     box-shadow: 0px 0px 50px -13px;
     transition: background-color 1s, color 0.4s, box-shadow 1s;

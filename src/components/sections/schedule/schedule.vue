@@ -1,5 +1,5 @@
 <template>
-    <section class="text-center sectionPaddingLevel sectionPaddingVertical">
+    <section class="scheduleSection text-center sectionPaddingLevel sectionPaddingVertical">
         <h2>Schedule</h2>
         <scheduleTab/>
     </section>
@@ -18,5 +18,7 @@ export default class schedule extends Vue{
 }
 </script>
 <style>
-    
+.scheduleSection {
+    max-height: 250px;
+}
 </style>
