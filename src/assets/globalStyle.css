@@ -30,6 +30,10 @@
     width: 100%;
 }
 
+.imgH {
+    height: 100%;
+}
+
 html, body {
     font-family: Quicksand;
     margin: 0;

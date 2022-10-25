@@ -4,6 +4,7 @@
         <scheduleSlider/>
         <teamNameBar/>
         <photoSlider/>
+        <resultTab/>
         <statsBar/>
         <newsBar/>
         <socialMediaBar/>
@@ -22,6 +23,7 @@ import statsBar from '@/components/sections/statsBar/statsBar.vue';
 import teamNameBar from '@/components/sections/teamNameBar.vue';
 import photoSlider from '@/components/sliders/photoSlider.vue';
 import scheduleSlider from '@/components/sliders/scheduleSlider/scheduleSlider.vue';
+import resultTab from '@/components/sections/resultTab/resultTab.vue';
 
 @Options({
     components: {
@@ -34,6 +36,7 @@ import scheduleSlider from '@/components/sliders/scheduleSlider/scheduleSlider.v
         teamNameBar,
         photoSlider,
         scheduleSlider,
+        resultTab
 
     }
 })
