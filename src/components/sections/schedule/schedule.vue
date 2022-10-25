@@ -18,7 +18,4 @@ export default class schedule extends Vue{
 }
 </script>
 <style>
-.scheduleSection {
-    max-height: 250px;
-}
 </style>

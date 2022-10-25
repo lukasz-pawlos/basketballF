@@ -30,7 +30,7 @@ export default class resultTab extends Vue {
 
 .resultTab__li {
     border-radius: 16px;
-    background: var(--orange);
+    background: var(--sectionGradient);
     height: 60px;
     align-items: center;
     padding: 5px;
