@@ -1,5 +1,5 @@
 <template>
-    <div class="player" :id="player.id">
+    <div class="card" :id="player.id">
         <div class="flex playerName">
             <span class="playerName__span">
                 <img class="playerName__img" src="../../../public/player.webp" alt="">
@@ -9,7 +9,7 @@
             </div>
             
         </div>
-        <hr>
+        <hr class="hrStyle">
         <div>
             <div class="flex" style="align-items: center; justify-content: space-between;">
                 <div>
@@ -44,7 +44,7 @@ export default class player extends Vue{
 </script>
 
 <style>
-.player {
+.card {
     background-color: var(--orange);
     padding: 20px;
     border-radius: 24px;

@@ -1,7 +1,9 @@
 <template>
     <section class="coachListSection sectionPaddingLevel sectionPaddingVertical">
         <h2 class="coachListSection__h2">Coaches</h2>
-        <coach v-for="coach in coaches" :key="coach" :coach="coach"/>
+        <div class="flex">
+            <coach v-for="coach in coaches" :key="coach" :coach="coach"/>
+        </div>
     </section>
 </template>
 <script lang="ts">

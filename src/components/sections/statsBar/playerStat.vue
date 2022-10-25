@@ -4,7 +4,7 @@
             <h4 class="playerStat__h4"> Player name</h4>
             <b class="playerStat__b">23.5</b>
         </div>
-        <hr v-if="!isColumn" class="playerStat__hr"/>
+        <hr v-if="!isColumn" class="playerStat__hr hrStyle"/>
 </template>
 
 <script lang="ts">
@@ -41,7 +41,6 @@ export default class playerStats extends Vue{
 
 .playerStat__hr {
     width: 80%;
-    border: 1px dashed  var(--black);
     margin-bottom: 38px;
 }
 

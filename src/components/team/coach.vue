@@ -1,13 +1,13 @@
 <template>
-    <div class="player" :id="coach.id">
-        <div class="playerLeft">
-            <img class="playerLeft__img" src="../../../public/player.webp" alt="">
+    <div class="card coach text-center" :id="coach.id">
+        <div class="coachPhoto">
+            <img class="img" src="../../../public/player.webp" alt="">
         </div>
-        <div class="playerRight">
-            <h1>{{ coach.name }} {{coach.forname}}</h1>
-                <p class="playerNumber__p">#{{ coach.funcion }}</p>
-            <h3>{{ coach.nationality }}</h3>
-            <h4>Age: {{ coach.age }}</h4>
+        <div class="">
+            <h4>{{ coach.name }} {{coach.forname}}</h4>
+            <h5 class="">{{ coach.funcion }}</h5>
+            <h5>{{ coach.nationality }}</h5>
+            <h6>Age: {{ coach.age }}</h6>
         </div>
     </div>
 </template>
@@ -25,5 +25,12 @@ export default class player extends Vue{
 </script>
 
 <style>
-    
+.coach {
+    width: 33%;
+    min-width: auto;
+}
+
+.coachPhoto {
+    width: 50%;
+}
 </style>

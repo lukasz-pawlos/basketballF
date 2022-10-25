@@ -5,7 +5,7 @@
             <span>VS</span>
             <img class="teamsLogos__img" src="logo2.jpg" alt="">
         </div>
-        <hr class="boxScore__hr">
+        <hr class="hrStyle">
         <div class="teamScore flex">
             <span class="teamName">{{ gameData.home }}</span>
             <span class="score">{{ gameData.homeScore }}</span>
@@ -14,7 +14,7 @@
             <span class="teamName">{{ gameData.guest }}</span>
             <span class="score">{{ gameData.guestScore }}</span>
         </div>
-        <hr class="boxScore__hr">
+        <hr class="hrStyle">
         <div class="gameData flex">
             <span class="gameIcon">
                 <font-awesome-icon v-if="gameData.home === 'Legia'"  :icon="{ prefix: 'fa', iconName: 'home' }" />
@@ -58,12 +58,6 @@ gameData !: {
     background-color: var(--orange-08);
     border-radius: 20px;
 }
-
-.boxScore__hr {
-    border-style: dashed;
-
-}
-
 
 .teamsLogos {
     padding-bottom: 16px;
