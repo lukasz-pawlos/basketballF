@@ -5,7 +5,7 @@
                 <img class="playerName__img" src="../../../public/player.webp" alt="">
             </span>
             <div class="playerName_div">
-                <h2 class="playerName_h2">{{ player.name }} {{player.forname}}</h2>  
+                <h2 class="playerName_h2">{{ player.name }} {{player.secondName}}</h2>  
             </div>
             
         </div>
@@ -27,19 +27,13 @@
 
 import { Prop } from 'vue-property-decorator'
 import { Vue } from 'vue-class-component';
+import { PlayerClass } from '@/models/PlayerClass';
 
 
 export default class player extends Vue{
 
     @Prop()
-    player!: {
-        name: string,
-        forname: string,
-        number: number,
-        nationality: string,
-        age: number
-        id: number
-    };  
+    player!: PlayerClass
 }
 </script>
 

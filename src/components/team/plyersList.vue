@@ -8,9 +8,10 @@
 </template>
 
 <script lang="ts">
-import { Prop } from 'vue-property-decorator';
 import { Options, Vue } from 'vue-class-component';
 import player from './plyer.vue';
+import { PlayerClass } from '@/models/PlayerClass';
+import { PlayerService } from '../../services/PlayerService'
 
 @Options({
     components: {
@@ -18,11 +19,14 @@ import player from './plyer.vue';
     }
 })
 
-
 export default class playersList extends Vue{
 
-    @Prop()
-    players!: []
+    players !: Array<PlayerClass>;
+
+    created(){
+        PlayerService
+    }
+    
 }
 </script>
 

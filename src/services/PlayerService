@@ -1,0 +1,11 @@
+import axios from "axios";
+import { PlayerClass } from '../models/PlayerClass';
+const API_URL = 'http://localhost:8080/api/players';
+
+export class PlayerService {
+
+    static getPlayers(): Promise<PlayerClass[]> {
+        return axios.get(API_URL).then(response => response.data)
+        .catch(error => console.log(error))
+    }
+}

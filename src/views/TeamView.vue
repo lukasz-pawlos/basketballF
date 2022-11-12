@@ -2,7 +2,7 @@
     <div>
         <navigationBar/>
         <scheduleSlider/>
-        <playersList :players="players"/>
+        <playersList/>
         <coachesList :coaches="coaches"/>
         <socialMediaBar/>
         <footerBar/>
@@ -33,23 +33,6 @@ import socialMediaBar from '@/components/sections/socialMediaBar.vue';
 })
 
 export default class TeamView extends Vue{
-
-    get players() {
-        return [
-            {name: 'Stefan', forname: 'Kot', number: 1, age: 34, nationality: "Poland", id: 1},
-            {name: 'Alojzy', forname: 'Kon', number: 22, age: 22,nationality: "Poland", id: 2},
-            {name: 'Rafał', forname: 'Pies', number: 33, age: 18,nationality: "Poland", id: 3},
-            {name: 'Stefan', forname: 'Kot', number: 1, age: 34, nationality: "Poland", id: 4},
-            {name: 'Alojzy', forname: 'Kon', number: 22, age: 22,nationality: "Poland", id: 5},
-            {name: 'Rafał', forname: 'Pies', number: 33, age: 18,nationality: "Poland", id: 6},
-            {name: 'Stefan', forname: 'Kot', number: 1, age: 34, nationality: "Poland", id: 7},
-            {name: 'Alojzy', forname: 'Kon', number: 22, age: 22,nationality: "Poland", id: 8},
-            {name: 'Rafał', forname: 'Pies', number: 33, age: 18,nationality: "Poland", id: 9},
-            {name: 'Stefan', forname: 'Kot', number: 1, age: 34, nationality: "Poland", id: 10},
-            {name: 'Alojzy', forname: 'Kon', number: 22, age: 22,nationality: "Poland", id: 11},
-            {name: 'Rafał', forname: 'Pies', number: 33, age: 18,nationality: "Poland", id: 12},
-        ];
-    }
 
     get coaches() {
         return [
