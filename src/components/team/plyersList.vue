@@ -2,7 +2,7 @@
     <section class="playerListSection sectionPaddingLevel sectionPaddingVertical">
         <h2 class="playerListSection__h2">Players</h2>
         <div class="players">
-            <player v-for="player in players" :key="player" :player="player"/>
+            <player :players="players"/>
         </div>
     </section>
 </template>
@@ -10,8 +10,10 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import player from './plyer.vue';
-import { PlayerClass } from '@/models/PlayerClass';
-import { PlayerService } from '../../services/PlayerService'
+// import {PlayerClass} from "@/models/PlayerClass";
+// import axios from "axios";
+// import {PlayerClass} from "@/models/PlayerClass";
+
 
 @Options({
     components: {
@@ -21,12 +23,17 @@ import { PlayerService } from '../../services/PlayerService'
 
 export default class playersList extends Vue{
 
-    players !: Array<PlayerClass>;
-
-    created(){
-        PlayerService
-    }
-    
+      // mounted(){
+      //   this.players = [{
+      //     id: 1,
+      //     name: "String",
+      //     secondName: "String",
+      //     nationality: "String",
+      //     number: 3,
+      //     age: 32
+      //   }]
+      //   console.log(this.players.length)
+      // }
 }
 </script>
 

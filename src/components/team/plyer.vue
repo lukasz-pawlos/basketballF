@@ -1,4 +1,5 @@
 <template>
+  <div v-for="player in players" :key="player">
     <div class="card" :id="player.id">
         <div class="flex playerName">
             <span class="playerName__span">
@@ -22,18 +23,28 @@
             </div>
         </div>
     </div>
+  </div>
 </template>
 <script lang="ts">
 
-import { Prop } from 'vue-property-decorator'
 import { Vue } from 'vue-class-component';
-import { PlayerClass } from '@/models/PlayerClass';
+ import {PlayerClass} from "@/models/PlayerClass";
+import {PlayerService} from "@/services/PlayerService";
+
 
 
 export default class player extends Vue{
 
-    @Prop()
-    player!: PlayerClass
+
+      players: PlayerClass[] | undefined | string
+
+
+  mounted() {
+        PlayerService.getPlayers().then(data => {this.players = data
+          this.$forceUpdate()})
+  }
+
+
 }
 </script>
 
