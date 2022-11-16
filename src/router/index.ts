@@ -6,6 +6,7 @@ import NewsView from '../views/NewsView.vue'
 import StatsView from '../views/StatsView.vue'
 import ContactView from '../views/ContactView.vue'
 import PlayerView from '@/views/PlayerView.vue'
+import AdminPanelView from "@/views/AdminPanelView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -42,6 +43,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/player',
     name: 'player',
     component: PlayerView
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AdminPanelView
   }
   
 ]

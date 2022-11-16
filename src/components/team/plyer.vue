@@ -18,7 +18,7 @@
                     <h6>Age: {{ player.age }}</h6>
                 </div>
                 <span class="playerNumber">
-                <p class="playerNumber__p">{{ player.number }}</p>
+                <span class="playerNumber__p">{{ player.number }}</span>
             </span>
             </div>
         </div>
