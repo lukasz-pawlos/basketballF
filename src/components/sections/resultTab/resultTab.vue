@@ -3,14 +3,21 @@
         <div class="resultTab">
             <h2 class="text-center">Table</h2>
             <ul>
-                <li class="flex resultTab__li text-center">
-                    <div style="width: 20%">1</div>
+                <li class="flex resultTab__li text-center"
+                v-for="(teamStanding, index) in teamsStandings" :key="teamStanding">
+                    <div style="width: 20%">{{ index + 1 }}</div>
                     <div style="height: 100%;">
                         <img class="imgH" src="logo1.png" alt="">
                     </div>
-                    <div style="width: 40%"> TEAM NAME </div>
-                    <div style="width: 20%"> 5 - 0 </div>
-                    <div style="width: 20%"> 10 </div>
+                      <div style="width: 40%">
+                        <router-link :to="`/team/${teamStanding.team.id}`">
+                        {{ teamStanding.team.name }} {{ teamStanding.team.city }}
+                        </router-link>
+                      </div>
+                    <div style="width: 20%">
+                      {{ teamStanding.win }} - {{ teamStanding.lose }}
+                    </div>
+                    <div style="width: 20%"> {{ teamStanding.points }} </div>
 
                 </li>
             </ul>
@@ -19,9 +26,21 @@
 </template>
 <script lang="ts">
 import { Vue } from "vue-class-component";
+import {StandingService} from "@/services/StandingService";
+import {StandingClass} from "@/models/response/StandingClass";
 
 export default class resultTab extends Vue {
-    
+
+  teamsStandings: StandingClass[] | undefined
+
+  created(){
+    StandingService.getStandings().then( data => {
+      this.teamsStandings = data;
+      console.log(this.teamsStandings)
+      this.$forceUpdate();
+    })
+  }
+
 }
 </script>
 <style>
