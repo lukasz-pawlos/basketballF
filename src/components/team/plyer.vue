@@ -1,5 +1,6 @@
 <template>
     <div class="card" :id="player.id">
+      <router-link :to="`/player/${player.id}`">
         <div class="flex playerName">
             <span class="playerName__span">
                 <img class="playerName__img" src="../../../public/player.webp" alt="">
@@ -21,6 +22,7 @@
             </span>
             </div>
         </div>
+      </router-link>
     </div>
 </template>
 <script lang="ts">

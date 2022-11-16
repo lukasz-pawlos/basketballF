@@ -7,9 +7,10 @@
     </section>
 </template>
 <script lang="ts">
-import { Prop } from 'vue-property-decorator';
 import { Options, Vue } from 'vue-class-component';
 import coach from './coach.vue'
+import {CoachClass} from "@/models/response/CoachClass";
+import {CoachService} from "@/services/CoachService";
 
 @Options({
     components: {
@@ -20,8 +21,15 @@ import coach from './coach.vue'
 
 export default class coachList extends Vue{
 
-    @Prop()
-    coaches!: []
+    coaches: CoachClass[] | undefined;
+
+  created() {
+    CoachService.getCoaches().then(
+        data => {
+          this.coaches = data
+          this.$forceUpdate()
+        })
+  }
 }
 </script>
 

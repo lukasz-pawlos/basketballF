@@ -15,12 +15,13 @@
 
 import { Prop } from 'vue-property-decorator'
 import { Vue } from 'vue-class-component';
+import coachList from "@/components/team/coachesList.vue";
 
 
 export default class player extends Vue{
 
     @Prop()
-    coach!: [];  
+    coach!: coachList[];
 }
 </script>
 

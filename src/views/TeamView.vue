@@ -34,13 +34,6 @@ import socialMediaBar from '@/components/sections/socialMediaBar.vue';
 
 export default class TeamView extends Vue{
 
-    get coaches() {
-        return [
-            {name: 'Stefan', forname: 'Kot', funcion: 'main coach', age: 67, nationality: "Poland", id: 1},
-            {name: 'Adam', forname: 'Dog', funcion: 'assistent', age: 44, nationality: "Poland", id: 2},
-            {name: 'Stive', forname: 'Cat', funcion: 'XD', age: 21, nationality: "Poland", id: 3},
-        ];
-    }
 
 }
 </script>

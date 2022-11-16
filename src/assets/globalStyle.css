@@ -13,7 +13,9 @@
     --black: rgb(0, 0, 0);
     --sectionGradient: linear-gradient(to top right, #cc3300 0%, #ff6600 100%);
 }
-
+a:-webkit-any-link{
+    color: inherit;
+}
 .flex {
     display: flex;
 }
