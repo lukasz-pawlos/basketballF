@@ -10,7 +10,7 @@
                         <img class="imgH" src="logo1.png" alt="">
                     </div>
                       <div style="width: 40%">
-                        <router-link :to="`/team/${teamStanding.team.id}`">
+                        <router-link :to="`/team?teamId=${teamStanding.team.id}`">
                         {{ teamStanding.team.name }} {{ teamStanding.team.city }}
                         </router-link>
                       </div>

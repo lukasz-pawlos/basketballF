@@ -1,18 +1,12 @@
 <template>
     <div class="formArea">
-        <h6 style="color:white;">Send your message to us</h6>
+      <h6 style="color:white;">Send your message to us</h6>
 
-        <label class="formArea__label" for="title">Title</label>
-        <input class="formArea__input" type="text" name="title" id="title" placeholder="Title">
 
-        <label class="formArea__label" for="title">First name</label>
-        <input class="formArea__input" type="text" name="fname" id="fname" placeholder="First name">
-
-        <label for="title" class="formArea__label">Last name</label>
-        <input class="formArea__input" type="text" name="lname" id="lname" placeholder="Last name">
-
-        <label class="formArea__label" for="title">Email</label>
-        <input class="formArea__input" type="email" name="email" id="email" placeholder="Email">
+      <inputWithLabel :type="`text`" :name="`Title`"/>
+      <inputWithLabel :type="`text`" :name="`First name`"/>
+      <inputWithLabel :type="`text`" :name="`Last name`"/>
+      <inputWithLabel :type="`email`" :name="`E-mail`"/>
 
         <label class="formArea__label" for="title">Message</label>
         <textarea class="formArea__texarea" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
@@ -22,7 +16,14 @@
 </template>
 <script lang="ts">
 
-import { Vue } from 'vue-class-component';
+import {Options, Vue} from 'vue-class-component';
+import inputWithLabel from "@/components/forms/iputs/inputWithLabel.vue";
+
+@Options({
+  components:{
+    inputWithLabel,
+  }
+})
 
 export default class contactForm extends Vue{
 

@@ -102,3 +102,9 @@ h6 {
     font-size: calc(var(--maxSizeTitle) - var(--stepSize) * 5);
     margin: 0;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

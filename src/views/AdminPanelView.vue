@@ -1,5 +1,5 @@
 <template>
-  <div id="adminPanel">
+  <div>
     <adminPanel/>
   </div>
 </template>

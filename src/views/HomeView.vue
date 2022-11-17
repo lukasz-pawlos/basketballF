@@ -3,7 +3,7 @@
         <navigationBar/>
         <scheduleSlider/>
         <teamNameBar/>
-        <photoSlider/>
+<!--        <photoSlider/>-->
         <resultTab/>
         <statsBar/>
         <newsBar/>
