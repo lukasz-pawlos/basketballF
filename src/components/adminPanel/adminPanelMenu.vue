@@ -1,9 +1,9 @@
 <template>
   <div id="adminPanelMenu">
-    <router-link to="/admin/player">
+    <router-link to="/admin/players">
       <button class="adminPanelMenu_btn">Players</button>
     </router-link>
-    <router-link to="/admin/coches">
+    <router-link to="/admin/coaches">
       <button class="adminPanelMenu_btn">Coaches</button>
     </router-link>
     <router-link to="/admin/teams">

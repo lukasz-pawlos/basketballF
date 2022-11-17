@@ -4,6 +4,8 @@
     <button v-if="isLogged" class="adminPanelNav__btn" @click="logout">
       <font-awesome-icon class="adminPanelNav__icon" icon="fa-solid fa-right-from-bracket" />
     </button>
+    <button v-if="isLogged && this.$route.name !==`admin`" class="adminPanelNav__btn left" @click="this.$router.push('/admin')">
+      <font-awesome-icon class="adminPanelNav__icon" icon="arrow-left" />   </button>
   </div>
 </template>
 
@@ -52,6 +54,9 @@ export default class adminPanelNav extends Vue{
   position: absolute;
   right: 10px;
   top: 0;
+}
+.left {
+  left: 10px;
 }
 
 .adminPanelNav__btn:hover {

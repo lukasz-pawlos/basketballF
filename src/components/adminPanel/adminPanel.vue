@@ -3,7 +3,21 @@
   <div id="adminPanel" class="flex">
     <loginForm v-if="!isLogged"/>
     <div v-else>
-      <admin-panel-menu></admin-panel-menu>
+      <div v-if="this.$route.name ===`admin`">
+        <admin-panel-menu></admin-panel-menu>
+      </div>
+      <div v-if="this.$route.name ===`admin-players`">
+        Players
+      </div>
+      <div v-if="this.$route.name ===`admin-coaches`">
+        coaches
+      </div>
+      <div v-if="this.$route.name ===`admin-teams`">
+        teams
+      </div>
+      <div v-if="this.$route.name ===`admin-matches`">
+        matches
+      </div>
     </div>
   </div>
 </template>

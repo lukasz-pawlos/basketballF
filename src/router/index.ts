@@ -7,6 +7,10 @@ import StatsView from '../views/StatsView.vue'
 import ContactView from '../views/ContactView.vue'
 import PlayerView from '@/views/PlayerView.vue'
 import AdminPanelView from "@/views/AdminPanelView.vue";
+import AdminPlayersPanelView from "@/views/AdminPlayersPanelView.vue";
+import AdminCoachesPanelView from "@/views/AdminCoachesPanelView.vue";
+import AdminMatchesPanelView from "@/views/AdminMatchesPanelView.vue";
+import AdminTeamsPanelView from "@/views/AdminTeamsPanelView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -47,7 +51,29 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/admin',
     name: 'admin',
-    component: AdminPanelView
+    component: AdminPanelView,
+    children: [
+      {
+        path: '/admin/players',
+        name: 'admin-players',
+        component: AdminPlayersPanelView,
+      },
+      {
+        path: '/admin/coaches',
+        name: 'admin-coaches',
+        component: AdminCoachesPanelView,
+      },
+      {
+        path: '/admin/teams',
+        name: 'admin-teams',
+        component: AdminTeamsPanelView,
+      },
+      {
+        path: '/admin/matches',
+        name: 'admin-matches',
+        component: AdminMatchesPanelView,
+      }
+    ]
   }
   
 ]
