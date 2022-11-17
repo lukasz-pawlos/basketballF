@@ -1,10 +1,12 @@
 <template>
-
+asdsa
 </template>
 
-<script>
-export default {
-  name: "adminMatchesPanel"
+<script lang="ts">
+import {Vue} from "vue-class-component";
+
+export default class AdminMatchesPanel extends Vue{
+
 }
 </script>
 

@@ -1,10 +1,12 @@
 <template>
-
+sadsa
 </template>
 
-<script>
-export default {
-  name: "adminTeamsPanel"
+<script lang="ts">
+import {Vue} from "vue-class-component";
+
+export default class AdminTeamsPanel extends Vue{
+
 }
 </script>
 

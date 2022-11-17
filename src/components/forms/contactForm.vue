@@ -44,7 +44,7 @@ export default class contactForm extends Vue{
     position: relative;
     top: 12px;
     left: 20px;
-    background: var(--orange);
+    background: var(--sectionGradient);
     width: fit-content;
     border-radius: 20px;
     padding: 0 8px;

@@ -11,6 +11,7 @@
 
       <input
           class="lngBtn"
+          style="width: 70%"
           type="submit"
           value="Log in"
       >

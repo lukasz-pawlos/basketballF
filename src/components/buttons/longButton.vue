@@ -1,5 +1,5 @@
 <template>
-    <button class="lngBtn" @click="$router.push(path)"><slot></slot></button>
+    <button class="lngBtn" :style="`width: ${width}%`" @click="$router.push(path)"><slot></slot></button>
 </template>
 
 <script lang="ts">
@@ -8,16 +8,21 @@ import { Prop } from "vue-property-decorator";
     
 export default class longButton extends Vue{
 
-    @Prop()
-    path!: string
+  @Prop()
+  path!: string
+
+  @Prop()
+  width: {
+    type: Number,
+    default: 70
+  }
     
 }
 </script>
 
 <style>
 .lngBtn {
-    width: 70%;
-    background: var(--orange);
+    background: var(--sectionGradient);
     color: var(--white);
     border-radius: 20px;
     font-size: 30px;
