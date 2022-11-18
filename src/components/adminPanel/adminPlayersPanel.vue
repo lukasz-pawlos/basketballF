@@ -7,28 +7,30 @@
     <ul>
       <li class="admin__li">
         <div class="flex text-center">
-          <div style="width: 5%">ID</div>
-          <div style="width: 20%">name</div>
-          <div style="width: 20%">secondName</div>
-          <div style="width: 20%">nationality</div>
-          <div style="width: 10%">number</div>
-          <div style="width: 10%">age</div>
-          <div style="width: 15%">function</div>
+          <admin-li-elem :width="5">ID</admin-li-elem>
+          <admin-li-elem :width="20">name</admin-li-elem>
+          <admin-li-elem :width="20">secondName</admin-li-elem>
+          <admin-li-elem :width="20">nationality</admin-li-elem>
+          <admin-li-elem :width="10">number</admin-li-elem>
+          <admin-li-elem :width="10">age</admin-li-elem>
+          <admin-li-elem :width="15">function</admin-li-elem>
         </div>
       </li>
       <li v-for="player in players" :key="player" class="admin__li">
         <div class="flex text-center">
-          <div style="width: 5%">{{ player.id }}</div>
-          <div style="width: 20%">{{ player.name }}</div>
-          <div style="width: 20%">{{ player.secondName }}</div>
-          <div style="width: 20%">{{ player.nationality }}</div>
-          <div style="width: 10%">{{ player.number }}</div>
-          <div style="width: 10%">{{ player.age }}</div>
-          <div class="flex" style="width: 15%">
-            <button class="functionBtn" @click="deletePlayer(player.id)">
-              <font-awesome-icon icon="trash" />
-            </button>
-          </div>
+          <admin-li-elem :width="5">{{ player.id }}</admin-li-elem>
+          <admin-li-elem :width="20">{{ player.name }}</admin-li-elem>
+          <admin-li-elem :width="20">{{ player.secondName }}</admin-li-elem>
+          <admin-li-elem :width="20">{{ player.nationality }}</admin-li-elem>
+          <admin-li-elem :width="10">{{ player.number }}</admin-li-elem>
+          <admin-li-elem :width="10">{{ player.age }}</admin-li-elem>
+          <admin-li-elem :width="15">
+            <div class="flex">
+              <button class="functionBtn" @click="deletePlayer(player.id)" title="Delete player">
+                <font-awesome-icon icon="trash" />
+              </button>
+            </div>
+          </admin-li-elem>
         </div>
       </li>
     </ul>
@@ -48,11 +50,14 @@ import {PlayerClass} from "@/models/response/PlayerClass";
 import {PlayerService} from "@/services/PlayerService";
 import popup from "@/components/popups/popup.vue";
 import addPLayerForm from "@//components/forms/addPlayerForm.vue";
+import adminLiElem from "@/components/adminPanel/elem/adminLiElem.vue";
+
 
 @Options({
   components:{
     longButton,
     popup,
+    adminLiElem,
     addPLayerForm
   }
 })
@@ -110,5 +115,10 @@ export default class AdminPlayersPanel extends Vue{
   height: 38px;
   background: var(--sectionGradient);
   cursor: pointer;
+}
+
+.admin__li__div{
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>

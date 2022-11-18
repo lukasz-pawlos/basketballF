@@ -1,5 +1,5 @@
 <template>
-  <div id="addPlayerForm" class="text-center">
+  <div id="addForm" class="text-center">
     <h5>Adding form</h5>
     <form @submit.prevent="addPlayer">
       <label class="formArea__label">name</label>
@@ -53,27 +53,5 @@ export default class addPlayerForm extends Vue{
 </script>
 
 <style>
-#addPlayerForm {
-  color: var(--white);
-  background: none;
-  padding: 16px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-}
-
-#addPlayerForm h5 {
-  color: black;
-}
-
-#addPlayerForm .formArea__input,
-#addPlayerForm .formArea__texarea{
-  border: 2px solid;
-}
-
-#addPlayerForm .formArea__label {
-  left: 0;
-}
 </style>
