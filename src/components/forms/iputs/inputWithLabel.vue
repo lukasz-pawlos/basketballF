@@ -60,7 +60,7 @@ export default class inputWithLabel extends Vue{
 
 .formArea__input,
 .formArea__texarea {
-  border: none;
+  border: 2px solid;
   border-radius: 20px;
   height: 45px;
   font-family: inherit;

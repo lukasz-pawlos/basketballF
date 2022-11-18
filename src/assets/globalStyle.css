@@ -20,6 +20,10 @@ a:-webkit-any-link{
     display: flex;
 }
 
+.flex-sb {
+    justify-content: space-between;
+}
+
 .text-center {
     text-align: center;
 }

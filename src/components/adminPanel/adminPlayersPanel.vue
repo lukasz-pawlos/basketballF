@@ -1,5 +1,5 @@
 <template>
-  <div id="adminPlayerPanel">
+  <div id="adminPanelOptions">
     <div class="text-center">
       <h1>PLAYERS</h1>
     </div>
@@ -24,14 +24,21 @@
           <div style="width: 20%">{{ player.nationality }}</div>
           <div style="width: 10%">{{ player.number }}</div>
           <div style="width: 10%">{{ player.age }}</div>
-          <div style="width: 15%"></div>
+          <div class="flex" style="width: 15%">
+            <button class="functionBtn" @click="deletePlayer(player.id)">
+              <font-awesome-icon icon="trash" />
+            </button>
+          </div>
         </div>
       </li>
     </ul>
     <div class="text-center">
-      <long-button :width=20> Add player </long-button>
+      <button class="lngBtn"  @click="changeStatus(popupStatus)"> Add player </button>
     </div>
   </div>
+  <popup :open="popupStatus" @close="()=> changeStatus(popupStatus)" :text="`Add new player`">
+    <addPLayerForm/>
+  </popup>
 </template>
 
 <script lang="ts">
@@ -39,17 +46,21 @@ import {Options, Vue} from "vue-class-component";
 import longButton from "@/components/buttons/longButton.vue";
 import {PlayerClass} from "@/models/response/PlayerClass";
 import {PlayerService} from "@/services/PlayerService";
+import popup from "@/components/popups/popup.vue";
+import addPLayerForm from "@//components/forms/addPlayerForm.vue";
 
 @Options({
   components:{
     longButton,
+    popup,
+    addPLayerForm
   }
 })
 
 export default class AdminPlayersPanel extends Vue{
 
   players: PlayerClass[] | undefined
-
+  popupStatus: Boolean = false
 
   created() {
     PlayerService.getPlayers().then(
@@ -58,11 +69,23 @@ export default class AdminPlayersPanel extends Vue{
           this.$forceUpdate()
         })
   }
+
+  changeStatus(status: boolean) {
+    this.popupStatus = !status
+}
+
+  deletePlayer(playerId: Number) {
+    PlayerService.deletePlayer(playerId).then(
+        () => {
+          this.$router.go(0);
+        }
+    )
+  }
 }
 </script>
 
 <style>
-#adminPlayerPanel {
+#adminPanelOptions {
   background: var(--white);
   min-width: 90vw;
   height: 80vh;
@@ -71,7 +94,7 @@ export default class AdminPlayersPanel extends Vue{
   padding: 20px;
 }
 
-#adminPlayerPanel h1 {
+#adminPanelOptions h1 {
   font-size: 40px;
   padding-bottom: 11px;
 }
@@ -81,4 +104,11 @@ export default class AdminPlayersPanel extends Vue{
   padding-bottom: 10px;
 }
 
+.functionBtn{
+  border-radius: 100%;
+  width: 38px;
+  height: 38px;
+  background: var(--sectionGradient);
+  cursor: pointer;
+}
 </style>

@@ -15,7 +15,9 @@ import {
     faUserXmark,
     faCircleInfo,
     faUserSecret,
-    faArrowLeft
+    faArrowLeft,
+    faXmark,
+    faTrash
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faFacebook,
@@ -26,7 +28,7 @@ import {
     faTiktok,
 } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faArrowLeft,faCircleInfo, faHome, faAt, faCalendarDay, faUserSecret,
+library.add(faArrowLeft,faTrash, faXmark ,faCircleInfo, faHome, faAt, faCalendarDay, faUserSecret,
     faUser, faUserPlus, faSignInAlt, faSignOutAlt, 
     faRankingStar, faSignOut, faPlus, faUserCheck, 
     faUserXmark ,faFacebook, faInstagram, faGithub,
