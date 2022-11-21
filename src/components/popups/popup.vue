@@ -1,5 +1,5 @@
 <template>
-  <div class="popup" v-show="open">
+  <div class="popup" :style="flexStart ? `align-items: flex-start` : ``" v-if="open">
     <div class="popup-iner">
       <div class="flex flex-sb">
         <button class="popup-close-btn" @click="$emit('close')">
@@ -19,6 +19,9 @@ import {Vue} from "vue-class-component";
 import {Prop} from "vue-property-decorator";
 
 export default class popup extends Vue{
+
+  @Prop({ default: 'false' })
+  flexStart: boolean
 
   @Prop()
   open: {
@@ -40,6 +43,9 @@ export default class popup extends Vue{
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: scroll;
+
+  padding: 100px 0;
 
   display: flex;
   justify-content: center;

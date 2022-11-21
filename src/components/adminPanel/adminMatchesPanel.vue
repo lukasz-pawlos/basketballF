@@ -1,7 +1,7 @@
 <template>
   <div id="adminPanelOptions">
     <div class="text-center">
-      <h1>Coaches</h1>
+      <h1>Matches</h1>
     </div>
     <hr class="hrStyle">
     <ul>
@@ -28,30 +28,44 @@
           <admin-li-elem :width="10">{{ convertTime(match.date) }}</admin-li-elem>
 
           <admin-li-elem :width="15">
-            <div class="flex" style="width: 15%">
-              <!--            <button class="functionBtn" @click="deletePlayer(coach.id)">-->
-              <!--              <font-awesome-icon icon="trash" />-->
-              <!--            </button>-->
-            </div>
+              <button class="functionBtn"
+                      :disabled="match.homeScore &&match.guestScore"
+                      @click="changeScoreStatus(popupScoreStatus, match.id)">
+                <font-awesome-icon icon="basketball" />
+              </button>
+              <button class="functionBtn"
+                      @click="changeStatsStatus(popupStatsStatus, match.id)">
+                <font-awesome-icon icon="s" />
+              </button>
           </admin-li-elem>
         </div>
       </li>
     </ul>
     <div class="text-center">
-      <button class="lngBtn"  @click="changeStatus(popupStatus)"> Add coach </button>
+      <button class="lngBtn"  @click="changeStatus(popupStatus)"> Add match </button>
     </div>
   </div>
   <popup :open="popupStatus" @close="()=> changeStatus(popupStatus)" :text="`Add new coach`">
-    <add-coach-form/>
+    <add-match-form/>
+  </popup>
+  <popup :open="popupScoreStatus"  @close="()=> changeScoreStatus(popupScoreStatus, selectedMatch)" :text="`Add score`">
+    <add-score-form :matchId="selectedMatch"/>
+  </popup>
+  <popup :open="popupStatsStatus" :flexStart="true" @close="()=> changeStatsStatus(popupStatsStatus, selectedMatch)" :text="`Add score`">
+    <stats-form-com :match-id="selectedMatch"></stats-form-com>
   </popup>
 </template>
 
 <script lang="ts">
 import {Options, Vue} from "vue-class-component";
 import AdminLiElem from "@/components/adminPanel/elem/adminLiElem.vue";
+import statsFormCom from "@/components/adminPanel/elem/statsFormCom.vue";
 import longButton from "@/components/buttons/longButton.vue";
 import popup from "@/components/popups/popup.vue";
-import addCoachForm from "@/components/forms/addCoachForm.vue";
+import addScoreForm from "@/components/forms/addScoreForm.vue";
+import addMatchForm from "@/components/forms/addMatchForm.vue";
+import addStatForm from "@/components/forms/addStatForm.vue";
+
 import {MatchClass} from "@/models/response/MatchClass";
 import {MatchService} from "@/services/MatchService";
 import {timeConverter} from "@/converters/timeConverter";
@@ -61,7 +75,10 @@ import {timeConverter} from "@/converters/timeConverter";
     AdminLiElem,
     longButton,
     popup,
-    addCoachForm,
+    addMatchForm,
+    addScoreForm,
+    addStatForm,
+    statsFormCom,
   }
 })
 
@@ -69,6 +86,9 @@ export default class AdminMatchesPanel extends Vue{
 
   matches: MatchClass[] | undefined
   popupStatus: Boolean = false
+  popupScoreStatus: Boolean = false
+  popupStatsStatus: Boolean = false
+  selectedMatch: number
 
   created() {
     MatchService.getMatches().then(
@@ -85,6 +105,18 @@ export default class AdminMatchesPanel extends Vue{
 
   changeStatus(status: boolean) {
     this.popupStatus = !status
+  }
+
+  changeScoreStatus(status: boolean, matchId: number) {
+    this.popupScoreStatus = !status
+    this.selectedMatch = matchId;
+    this.$forceUpdate();
+  }
+
+  changeStatsStatus(status: boolean, matchId: number) {
+    this.popupStatsStatus = !status
+    this.selectedMatch = matchId;
+    this.$forceUpdate();
   }
 
   convertTime(date: string) {

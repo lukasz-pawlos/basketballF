@@ -15,6 +15,7 @@
           <admin-li-elem :width="10">age</admin-li-elem>
           <admin-li-elem :width="15">function</admin-li-elem>
         </div>
+        <hr class="hrStyle">
       </li>
       <li v-for="player in players" :key="player" class="admin__li">
         <div class="flex text-center">
@@ -25,7 +26,7 @@
           <admin-li-elem :width="10">{{ player.number }}</admin-li-elem>
           <admin-li-elem :width="10">{{ player.age }}</admin-li-elem>
           <admin-li-elem :width="15">
-            <div class="flex">
+            <div class="flex flex-center">
               <button class="functionBtn" @click="deletePlayer(player.id)" title="Delete player">
                 <font-awesome-icon icon="trash" />
               </button>

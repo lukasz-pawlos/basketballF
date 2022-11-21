@@ -26,10 +26,7 @@
           <admin-li-elem :width="10">{{ coach.age }}</admin-li-elem>
 
           <admin-li-elem :width="15">
-            <div class="flex" style="width: 15%">
-  <!--            <button class="functionBtn" @click="deletePlayer(coach.id)">-->
-  <!--              <font-awesome-icon icon="trash" />-->
-  <!--            </button>-->
+            <div class="flex flex-center" style="width: 15%">
             </div>
           </admin-li-elem>
         </div>
