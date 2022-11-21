@@ -94,7 +94,7 @@ export default class AdminPlayersPanel extends Vue{
 #adminPanelOptions {
   background: var(--white);
   min-width: 90vw;
-  height: 80vh;
+  min-height: 80vh;
   margin: 80px 0 30px 0;
   border-radius: 20px;
   padding: 20px;
