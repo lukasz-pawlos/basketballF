@@ -1,10 +1,11 @@
 <template>
     <div>
-        <navigationBar/>
-        <scheduleSlider/>
-        <teamNameBar/>
-        <socialMediaBar/>
-        <footerBar/>
+      <navigationBar/>
+      <scheduleSlider/>
+      <teamNameBar/>
+      <player-card></player-card>
+      <socialMediaBar/>
+      <footerBar/>
     </div>
 </template>
 
@@ -15,6 +16,7 @@ import socialMediaBar from "@/components/sections/socialMediaBar.vue";
 import teamNameBar from "@/components/sections/teamNameBar.vue";
 import scheduleSlider from "@/components/sliders/scheduleSlider/scheduleSlider.vue";
 import { Options, Vue } from "vue-class-component";
+import playerCard from "@/components/sections/player/playerCard.vue";
 
 @Options({
     components:{
@@ -22,7 +24,8 @@ import { Options, Vue } from "vue-class-component";
         scheduleSlider,
         teamNameBar,
         socialMediaBar,
-        footerBar
+        footerBar,
+        playerCard
     }
 })
 

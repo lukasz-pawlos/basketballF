@@ -1,6 +1,6 @@
 <template>
     <div class="card" :id="player.id">
-      <router-link :to="`/player/${player.id}`">
+      <router-link :to="`player?playerId=${player.id}`">
         <div class="flex playerName">
             <span class="playerName__span">
                 <img class="playerName__img" src="../../../public/player.webp" alt="">
@@ -80,7 +80,7 @@ export default class player extends Vue{
 }
 
 .playerName_h2 {
-    font-size: 48px;
+    font-size: 36px;
 }
 
 </style>

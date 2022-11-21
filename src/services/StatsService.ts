@@ -5,9 +5,9 @@ const API_URL = 'http://localhost:8080/api/stats';
 
 export class StatsService {
 
-    static async getPlayerByPlayerId(playerId: Number | String){
+    static async getStatsByPlayerId(playerId: Number | String){
         try {
-            const { data } = await axios.get<StatClass[]>(API_URL + `player/${playerId}`);
+            const { data } = await axios.get<StatClass[]>(API_URL + `/player/${playerId}`);
             return data;
         } catch (error) {
             if (axios.isAxiosError(error)) {
@@ -16,9 +16,9 @@ export class StatsService {
         }
     }
 
-    static async getPlayerByMatchId(matchId: Number | String){
+    static async getStatsByMatchId(matchId: Number | String){
         try {
-            const { data } = await axios.get<StatClass[]>(API_URL + `match/${matchId}`);
+            const { data } = await axios.get<StatClass[]>(API_URL + `/match/${matchId}`);
             return data;
         } catch (error) {
             if (axios.isAxiosError(error)) {

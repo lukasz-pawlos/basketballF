@@ -5,7 +5,9 @@
                 <div class="newsList">
                     <news v-for="data in news" :key="data" :news="data"/>
                 </div>
-            <longButton :path="'/news'">ALL NEWS</longButton>
+          <router-link to="/news">
+            <button class="lngBtn" style="width: 70%">ALL NEWS</button>
+          </router-link>
         </div>
     </section>
 </template>

@@ -1,4 +1,4 @@
-<template lang>
+<template>
     <section class="statsSection sectionPaddingLevel sectionPaddingVertical">
         <div class="text-center">
             <h2>Stats</h2>
@@ -11,7 +11,9 @@
                     <statsSmallBlock/>
                 </div>
             </div>
-            <longButton :path="'/stats'">ALL STATS</longButton>
+            <router-link to="/news">
+              <button class="lngBtn" style="width: 70%">ALL STATS</button>
+            </router-link>
         </div>
 
     </section>

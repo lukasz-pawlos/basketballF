@@ -8,7 +8,6 @@
             </p>                        
         </div>
         <button class="news__button">Read more</button>
-        <LongButton></LongButton>
     </div>
 </template>
 

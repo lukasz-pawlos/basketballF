@@ -18,7 +18,7 @@
 
       <div>
         <label class="formArea__label">blocks</label>
-        <input class="formArea__input" v-model="stat.steals" type="number"/>
+        <input class="formArea__input" v-model="stat.blocks" type="number"/>
       </div>
 
       <div>
