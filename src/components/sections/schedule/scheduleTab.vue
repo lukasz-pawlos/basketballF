@@ -2,56 +2,30 @@
     <div class="scheduleTab">
         <table class="scheduleTab__table">
             <tbody class="scheduleTab__tbody">
+              <template v-for="match in matches" :key="match">
                 <tr class="scheduleTab__tr">
-                    <td class="scheduleTab__td teamTab">Home team</td>
+                    <td class="scheduleTab__td teamTab">
+                      <b>{{match.homeTeam.name}} {{match.homeTeam.city}}</b>
+                    </td>
                     <td class="scheduleTab__td">
+                      <router-link to="/team">
                         <span>
-                            <span>69</span>
+                            <span>{{ match.homeScore }}</span>
                             <span>:</span>
-                            <span>89</span>
+                            <span>{{ match.guestScore }}</span>
                         </span>
+                      </router-link>
                     </td>
-                    <td class="scheduleTab__td teamTab">Gues team</td>
-                </tr>
-                <tr class="scheduleTab__tr">
-                    <td colspan="3" class="scheduleTab__td">Wrocław</td>
-                </tr>
-
-                <tr class="scheduleTab__tr">
-                    <td class="scheduleTab__td">Home team</td>
-                    <td class="scheduleTab__td">
-                        <span>
-                            <span>69</span>
-                            <span>:</span>
-                            <span>89</span>
-                        </span>
+                    <td class="scheduleTab__td teamTab">
+                      <b>{{match.guestTeam.name}} {{match.guestTeam.city}}</b>
                     </td>
-                    <td>Gues team</td>
-                </tr>
-                <tr class="scheduleTab__tr">
-                    <td colspan="3" class="scheduleTab__td">Wrocław</td>
-                </tr>
-
-                <tr class="scheduleTab__tr">
-                    <td class="scheduleTab__td">Home team</td>
-                    <td class="scheduleTab__td ">
-                        <span>
-                            <span>69</span>
-                            <span>:</span>
-                            <span>89</span>
-                        </span>
-                    </td>
-                    <td>Gues team</td>
                 </tr>
                 <tr class="scheduleTab__tr">
                     <td colspan="3" class="scheduleTab__td">
-                        <span>
-                            <span>23 December 2022</span>
-                            <span>, </span>
-                            <span>Wrocław</span>
-                        </span>
+                      {{ convertTime(match.date) }}, {{ match.homeTeam.city }}
                     </td>
                 </tr>
+              </template>
             </tbody>
         </table>
     </div>
@@ -59,9 +33,25 @@
 
 <script lang="ts">
 import { Vue } from "vue-class-component";
+import {MatchClass} from "@/models/response/MatchClass";
+import {MatchService} from "@/services/MatchService";
+import {timeConverter} from "@/converters/timeConverter";
 
 export default class scheduleTab extends Vue{
-    
+
+  matches: MatchClass[] | undefined
+
+
+  created(){
+    MatchService.getMatches().then(data => {
+      this.matches = data;
+      this.$forceUpdate();
+    })
+  }
+
+  convertTime(date: string) {
+    return timeConverter.longTime(date).slice(0, -3);
+  }
 }
 </script>
 <style>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <navigationBar/>
-        <scheduleSlider/>
+        <scheduleSlider :matches="matches" />
         <teamNameBar/>
 <!--        <photoSlider/>-->
         <resultTab/>
@@ -24,6 +24,8 @@ import teamNameBar from '@/components/sections/teamNameBar.vue';
 import photoSlider from '@/components/sliders/photoSlider.vue';
 import scheduleSlider from '@/components/sliders/scheduleSlider/scheduleSlider.vue';
 import resultTab from '@/components/sections/resultTab/resultTab.vue';
+import {MatchService} from "@/services/MatchService";
+import {MatchClass} from "@/models/response/MatchClass";
 
 @Options({
     components: {
@@ -42,7 +44,15 @@ import resultTab from '@/components/sections/resultTab/resultTab.vue';
 })
 
 export default class HomeView extends Vue{
-    
+
+  matches: MatchClass[] | undefined
+
+  created(){
+    MatchService.getMatches().then(data => {
+      this.matches = data;
+      this.$forceUpdate();
+    }).then( () => this.$forceUpdate())
+  }
 }
 </script>
 <style>

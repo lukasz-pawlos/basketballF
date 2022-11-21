@@ -140,7 +140,7 @@ export default class AdminMatchesPanel extends Vue{
   }
 
   convertTime(date: string) {
-    return timeConverter.longTime(date);
+    return timeConverter.longTime(date).slice(0, -3);
   }
 
 }

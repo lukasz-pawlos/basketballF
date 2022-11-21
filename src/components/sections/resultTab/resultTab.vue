@@ -7,7 +7,7 @@
                 v-for="(teamStanding, index) in teamsStandings" :key="teamStanding">
                     <div style="width: 20%">{{ index + 1 }}</div>
                     <div style="height: 100%;">
-                        <img class="imgH" src="logo1.png" alt="">
+                        <img class="imgH" :src="`logo${teamStanding.team.id}.png`" alt="">
                     </div>
                       <div style="width: 40%">
                         <router-link :to="`/team?teamId=${teamStanding.team.id}`">
@@ -36,10 +36,10 @@ export default class resultTab extends Vue {
   created(){
     StandingService.getStandings().then( data => {
       this.teamsStandings = data;
-      console.log(this.teamsStandings)
       this.$forceUpdate();
     })
   }
+
 
 }
 </script>
