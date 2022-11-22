@@ -35,7 +35,6 @@
                     </ul>
                 </div>
                 <div class="footerAreaGuarter">
-                  <img src="logo1.png">
                 </div>
             </div>
             <hr class="footerLine">

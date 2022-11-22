@@ -94,7 +94,7 @@ export default class statTab extends Vue{
 .scheduleTab__tr:nth-child(6n+1),
 .scheduleTab__tr:nth-child(6n+2),
 .scheduleTab__tr:nth-child(6n+3){
-  background-color: var(--orange);
+  background: var(--sectionGradient);
 }
 
 .scheduleTab__tr:nth-child(6n),

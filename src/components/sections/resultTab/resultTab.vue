@@ -6,7 +6,7 @@
                 <li class="flex resultTab__li text-center"
                 v-for="(teamStanding, index) in teamsStandings" :key="teamStanding">
                     <div style="width: 20%">{{ index + 1 }}</div>
-                    <div style="height: 100%;">
+                    <div style="height: 100%; width: 60px">
                         <img class="imgH" :src="`logo${teamStanding.team.id}.png`" alt="">
                     </div>
                       <div style="width: 40%">

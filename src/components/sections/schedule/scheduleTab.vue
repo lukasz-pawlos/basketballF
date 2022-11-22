@@ -1,7 +1,7 @@
 <template>
     <div class="scheduleTab">
         <table class="scheduleTab__table">
-            <tbody class="scheduleTab__tbody">
+            <tbody class="scheduleTab__tbody" id="sT">
               <template v-for="match in matches" :key="match">
                 <tr class="scheduleTab__tr">
                     <td class="scheduleTab__td teamTab">
@@ -60,11 +60,15 @@ export default class scheduleTab extends Vue{
     font-size: 32px;
 }
 
-.scheduleTab__tr:nth-child(4n+1), .scheduleTab__tr:nth-child(4n+2){
-    background: var(--orange);
+#sT{
+
 }
 
-.scheduleTab__tr:nth-child(4n-1), .scheduleTab__tr:nth-child(4n){
+#sT .scheduleTab__tr:nth-child(4n+1), #sT .scheduleTab__tr:nth-child(4n+2){
+    background: var(--sectionGradient);
+}
+
+#sT .scheduleTab__tr:nth-child(4n-1), #sT .scheduleTab__tr:nth-child(4n){
     background-color: var(--orange-04);
 
 }

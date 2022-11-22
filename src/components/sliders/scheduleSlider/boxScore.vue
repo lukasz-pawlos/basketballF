@@ -60,7 +60,7 @@ export default class boxScore extends Vue {
 .boxScore {
     padding: 16px;
     width: 200px;
-    background-color: var(--orange-08);
+    background: var(--sectionGradient);
     border-radius: 20px;
 }
 
