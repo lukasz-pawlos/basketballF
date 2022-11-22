@@ -3,6 +3,7 @@
         <navigationBar/>
         <scheduleSlider/>
         <teamNameBar/>
+      <contact></contact>
         <socialMediaBar/>
         <footerBar/> 
     </div>
@@ -20,6 +21,7 @@ import statsBar from '@/components/sections/statsBar/statsBar.vue';
 import teamNameBar from '@/components/sections/teamNameBar.vue';
 import photoSlider from '@/components/sliders/photoSlider.vue';
 import scheduleSlider from '@/components/sliders/scheduleSlider/scheduleSlider.vue';
+import contact from "@/components/sections/contact.vue";
 
 @Options({
 components: {
@@ -32,6 +34,7 @@ components: {
     teamNameBar,
     photoSlider,
     scheduleSlider,
+    contact,
 
 }
 })

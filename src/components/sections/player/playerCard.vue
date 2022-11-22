@@ -1,5 +1,5 @@
 <template>
-  <section class="sectionPaddingVertical sectionPaddingLevel playerSection text-center">
+  <section v-if="player" class="sectionPaddingVertical sectionPaddingLevel playerSection text-center">
     <div class="flex flex-sb" style="align-items: center">
       <span class="playerName__span">
         <img class="playerName__img" src="../../../../public/player.webp" alt="">
@@ -14,6 +14,7 @@
     <h5>Games stats</h5>
     <stat-tab></stat-tab>
   </section>
+  <h1 v-else class="text-center">PLAYER NOT FOUND</h1>
 </template>
 <script lang="ts">
 

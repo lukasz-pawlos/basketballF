@@ -13,7 +13,6 @@
         </div>
         <div class="teamScore flex">
           <span class="teamName">{{ gameData.guestTeam.name }}</span>
-          <span class="score">{{ gameData.guestScore }}</span>
           <span v-if="gameData.guestScore" class="score">{{ gameData.guestScore }}</span>
           <span v-else>---</span>
         </div>

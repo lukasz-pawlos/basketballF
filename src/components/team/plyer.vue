@@ -10,12 +10,15 @@
             </div>
             
         </div>
-        <hr class="hrStyle">
+        <hr class="hrStyle" style="width: 98%">
         <div>
-            <div class="flex" style="align-items: center; justify-content: space-between;">
+            <div class="flex" style="align-items: center; justify-content: space-between; position: relative">
                 <div>
                     <h5>{{ player.nationality }}</h5>
                     <h6>Age: {{ player.age }}</h6>
+                </div>
+                <div class="div__flagImg">
+                  <img class="flagImg" :src="`https://countryflagsapi.com/svg/${player.nationality}`">
                 </div>
                 <span class="playerNumber">
                 <span class="playerNumber__p">{{ player.number }}</span>
@@ -83,4 +86,13 @@ export default class player extends Vue{
     font-size: 36px;
 }
 
+.div__flagImg {
+  position: absolute;
+  height: 36px;
+  top: -17px;
+  left: 2px;
+}
+.flagImg {
+  height: 100%;
+}
 </style>
