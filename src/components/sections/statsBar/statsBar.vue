@@ -4,18 +4,14 @@
             <h2>Stats</h2>
             <div class="statsList">
                 <div class="statsContainer">
-                    <statsBlock/>
+                    <statsBlock :players-i-d="playerIdPoints"/>
                 </div>
                 <div class="statsContainer smallContainer">
-                    <statsSmallBlock/>
-                    <statsSmallBlock/>
+                    <statsSmallBlock :players-i-d="playerIdRebounds" :name="`Rebounds`"/>
+                    <statsSmallBlock :players-i-d="playerIdAssists" :name="`Assists`"/>
                 </div>
             </div>
-            <router-link to="/news">
-              <button class="lngBtn" style="width: 70%">ALL STATS</button>
-            </router-link>
         </div>
-
     </section>
 </template>
 
@@ -34,7 +30,11 @@ import longButton from '@/components/buttons/longButton.vue';
 })
 
 export default class statsBar extends Vue{
-    
+
+  playerIdPoints = [1, 5, 4];
+  playerIdRebounds = [12, 11, 1];
+  playerIdAssists = [1, 9, 8];
+
 }
 </script>
 

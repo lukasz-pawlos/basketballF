@@ -1,7 +1,5 @@
 <template>
-  <div>
     <adminPanel/>
-  </div>
 </template>
 
 <script lang="ts">

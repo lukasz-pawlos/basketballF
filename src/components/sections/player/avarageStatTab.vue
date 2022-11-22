@@ -2,42 +2,40 @@
   <div class="scheduleTab">
     <table class="scheduleTab__table">
       <tbody class="scheduleTab__tbody">
-      <template v-for="stat in stats" :key="stat">
         <tr class="scheduleTab__tr">
           <td class="scheduleTab__td" style="width: 20%">
             Points
           </td>
           <td class="scheduleTab__td" style="width: 20%">
-            rebounds
+            Rebounds
           </td>
           <td class="scheduleTab__td" style="width: 20%">
-            assists
+            Assists
           </td>
           <td class="scheduleTab__td" style="width: 20%">
-            blocks
+            Blocks
           </td>
           <td class="scheduleTab__td" style="width: 20%">
-            steals
+            Steals
           </td>
         </tr>
         <tr class="scheduleTab__tr">
           <td class="scheduleTab__td" style="width: 20%">
-            {{ stat.points }}
+            {{ stats.points }}
           </td>
           <td class="scheduleTab__td" style="width: 20%">
-            {{ stat.rebounds }}
+            {{ stats.rebounds }}
           </td>
           <td class="scheduleTab__td" style="width: 20%">
-            {{ stat.assists }}
+            {{ stats.assists }}
           </td>
           <td class="scheduleTab__td" style="width: 20%">
-            {{ stat.blocks }}
+            {{ stats.blocks }}
           </td>
           <td class="scheduleTab__td" style="width: 20%">
-            {{ stat.steals }}
+            {{ stats.steals }}
           </td>
         </tr>
-      </template>
       </tbody>
     </table>
   </div>
@@ -47,19 +45,26 @@
 import { Vue } from "vue-class-component";
 
 import {StatsService} from "@/services/StatsService";
-import {StatClass} from "@/models/response/StatClass";
+import {StatAvgClass} from "@/models/response/StatAvgClass";
 
 
 export default class avarageStatTab extends Vue{
 
-  stats: StatClass[] | undefined
+  stats: StatAvgClass | undefined = {
+    playerId: 0,
+    points: 0,
+    assists: 0,
+    rebounds: 0,
+    blocks: 0,
+    steals: 0
+  }
 
 
   created(){
     // @ts-ignore: Unreachable code error
     const playerId = this.$route.query.playerId
     // @ts-ignore: Unreachable code error
-    StatsService.getStatsByPlayerId(playerId).then(date => {
+    StatsService.getAvgStatsByPlayerId(playerId).then(date => {
       this.stats = date;
       this.$forceUpdate();
     })

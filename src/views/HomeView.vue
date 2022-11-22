@@ -1,5 +1,4 @@
 <template>
-    <div>
         <navigationBar/>
         <scheduleSlider :matches="matches" />
         <teamNameBar/>
@@ -9,7 +8,6 @@
         <newsBar/>
         <socialMediaBar/>
         <footerBar/>
-    </div>
 </template>
 
 <script lang="ts">

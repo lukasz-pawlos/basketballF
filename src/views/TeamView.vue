@@ -1,12 +1,10 @@
 <template>
-    <div>
         <navigationBar/>
         <scheduleSlider/>
         <playersList/>
         <coachesList :coaches="coaches"/>
         <socialMediaBar/>
         <footerBar/>
-    </div>
 </template>
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';

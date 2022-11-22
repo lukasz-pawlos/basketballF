@@ -8,7 +8,7 @@
             <b>{{stat.match.homeTeam.name}} {{stat.match.homeTeam.city}}</b>
           </td>
           <td class="scheduleTab__td">
-            <router-link to="/team">
+            <router-link :to="`/match?matchId=${stat.match.id}`">
                         <span>
                             <span>{{ stat.match.homeScore }}</span>
                             <span>:</span>

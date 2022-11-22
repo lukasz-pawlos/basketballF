@@ -1,8 +1,8 @@
 <template>
         <div class="playerStat" :class="{column: isColumn}">
             <img src="player.webp" alt="" class="playerstat__img">
-            <h4 class="playerStat__h4"> Player name</h4>
-            <b class="playerStat__b">23.5</b>
+            <h4 class="playerStat__h4"> {{ name }}</h4>
+            <b class="playerStat__b">{{ value }}</b>
         </div>
         <hr v-if="!isColumn" class="playerStat__hr hrStyle"/>
 </template>
@@ -13,9 +13,15 @@ import { Prop } from 'vue-property-decorator';
 
 export default class playerStats extends Vue{
 
-    @Prop()
-    isColumn!: { default: false } 
-    
+  @Prop()
+  isColumn: { default: false }
+
+  @Prop()
+  name: String
+
+  @Prop()
+  value: number | string
+
 }
 </script>
 
