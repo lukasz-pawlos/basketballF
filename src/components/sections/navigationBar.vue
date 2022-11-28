@@ -16,9 +16,6 @@
             <router-link to="/team">
                 <button class="navArea__button">Team</button>
             </router-link>
-            <router-link to="/stats">
-                <button class="navArea__button">Stats</button>
-            </router-link>
             <router-link to="/contact">
                 <button class="navArea__button">Contact</button>
             </router-link>
@@ -64,5 +61,10 @@ export default class navigationBar extends Vue{
 }
 .navAreaLogo_img{
     height: 100%;
+}
+
+.navSection .basketball-active .navArea__button {
+  background-color: var(--orange);
+  color: var(--white);
 }
 </style>
