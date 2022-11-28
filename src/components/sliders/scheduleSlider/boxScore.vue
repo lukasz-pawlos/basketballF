@@ -49,9 +49,6 @@ export default class boxScore extends Vue {
     return timeConverter.longTime(date).slice(0, -3);
   }
 
-  created(){
-    console.log(this.gameData)
-  }
 
 }
 </script>

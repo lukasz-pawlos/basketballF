@@ -3,7 +3,7 @@
         <div class="text-center">
             <h2>Hot news</h2>
                 <div class="newsList">
-                    <news v-for="data in news" :key="data" :news="data"/>
+                    <news v-for="data in NEWS" :key="data" :news="data"/>
                 </div>
           <router-link to="/news">
             <button class="lngBtn" style="width: 70%">ALL NEWS</button>
@@ -16,6 +16,8 @@
 import { Options, Vue } from 'vue-class-component';
 import news from './newsBlock.vue';
 import longButton from '@/components/buttons/longButton.vue';
+import {NewsClass} from "@/models/response/NewsClass";
+import {NewsService} from "@/services/NewsService";
 
 @Options({
     components: {
@@ -25,23 +27,17 @@ import longButton from '@/components/buttons/longButton.vue';
 })
 
 export default class newsBar extends Vue{
-    
-    get news() {
-        return [
-        {
-            title: "News",
-            text: "These are short, famous texts in English from classic sources like the Bible or Shakespeare. Some texts have word definitions and explanations to help you. Some of these texts are written in an old style of English. Try to understand them, because the English that we speak today is based on what our great, great, great, great grandparents spoke before! Of course, not all these texts were originally written in English"
-        },
-        {
-            title: "News",
-            text: "These are short, famous texts in English from classic sources like the Bible or Shakespeare. Some texts have word definitions and explanations to help you. Some of these texts are written in an old style of English. Try to understand them, because the English that we speak today is based on what our great, great, great, great grandparents spoke before! Of course, not all these texts were originally written in English"
-        },
-        {
-            title: "News",
-            text: "These are short, famous texts in English from classic sources like the Bible or Shakespeare. Some texts have word definitions and explanations to help you. Some of these texts are written in an old style of English. Try to understand them, because the English that we speak today is based on what our great, great, great, great grandparents spoke before! Of course, not all these texts were originally written in English"
-        }
-        ]
-    }
+
+  NEWS: NewsClass[] | undefined
+
+  created() {
+    NewsService.getNews().then(date => {
+      // @ts-ignore: Unreachable code error
+      const newsList = [date[0],  date[1], date[2]];
+      this.NEWS = newsList;
+      this.$forceUpdate();
+    })
+  }
 }
 </script>
 

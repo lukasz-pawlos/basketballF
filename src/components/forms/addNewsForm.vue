@@ -43,7 +43,6 @@ export default class addNewsForm extends Vue{
 
   created() {
     this.news.matchId = this.matchId
-    console.log(this.news.matchId)
   }
 }
 </script>

@@ -107,10 +107,6 @@ export default class AdminMatchesPanel extends Vue{
     MatchService.getMatches().then(
         data => {
           this.matches = data
-          this.matches?.forEach(match =>{
-            const kok = new Date(match.date)
-            console.log(kok.toLocaleString())
-          })
           this.$forceUpdate()
         })
   }

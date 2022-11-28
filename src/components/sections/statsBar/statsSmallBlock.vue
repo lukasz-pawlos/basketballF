@@ -123,7 +123,6 @@ import {PlayerService} from "@/services/PlayerService";
 
     created(){
       this.TEXT = this.name
-      console.log(this.name)
       // @ts-ignore: Unreachable code error
       StatsService.getAvgStatsByPlayerId(this.playersID[0]).then(date => {
         this.stats1 = date;

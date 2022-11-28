@@ -7,7 +7,10 @@
                 {{ news.text }}
             </p>                        
         </div>
-        <button class="news__button">Read more</button>
+        <router-link :to="`match?matchId=${news.matchId}`">
+        <button class="news__button">Stats</button>
+        </router-link>
+        <span class="news__date">{{ convertTime(news.date) }}</span>
     </div>
 </template>
 
@@ -15,16 +18,18 @@
 
 import { Prop } from 'vue-property-decorator'
 import { Vue } from 'vue-class-component';
+import {NewsClass} from "@/models/response/NewsClass";
+import {timeConverter} from "@/converters/timeConverter";
 
     
 export default class news extends Vue{
         
     @Prop()
-    news!: {
-        title: string,
-        text: string,
-    };
-    
+    news: NewsClass
+
+  convertTime(date: string) {
+    return timeConverter.longTime(date).slice(0, -3);
+  }
     
     }
 </script>
@@ -76,5 +81,13 @@ export default class news extends Vue{
     background: var(--orange);
     color: var(--white);
     box-shadow: 0px 0px 75px -13px var(--orange);
+}
+
+.news__date {
+  background: none;
+  color: var(--orange);
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
 }
 </style>

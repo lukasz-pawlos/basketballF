@@ -69,7 +69,7 @@ export default class scheduleTab extends Vue{
 }
 
 #sT .scheduleTab__tr:nth-child(4n-1), #sT .scheduleTab__tr:nth-child(4n){
-    background-color: var(--orange-04);
+    background: var(--orange-04);
 
 }
 
