@@ -11,6 +11,7 @@ import AdminPlayersPanelView from "@/views/AdminPlayersPanelView.vue";
 import AdminCoachesPanelView from "@/views/AdminCoachesPanelView.vue";
 import AdminMatchesPanelView from "@/views/AdminMatchesPanelView.vue";
 import AdminTeamsPanelView from "@/views/AdminTeamsPanelView.vue";
+import MatchView from "@/views/MatchView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -47,6 +48,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/player',
     name: 'player',
     component: PlayerView,
+  },
+  {
+    path: '/match',
+    name: 'match',
+    component: MatchView,
   },
   {
     path: '/admin',
